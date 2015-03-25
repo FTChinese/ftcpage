@@ -1,0 +1,25 @@
+{
+  "browser": true,
+  "esnext": false,
+  "bitwise": false,
+  "camelcase": false,
+  "curly": true,
+  "eqeqeq": false,
+  "immed": false,
+  "indent": 2,
+  "latedef": false,
+  "newcap": false,
+  "noarg": false,
+  "quotmark": "any",
+  "undef": false,
+  "unused": false,
+  "strict": false,
+  "jquery": true,
+  "-W041": false,
+  "laxbreak": true,
+  "laxcomma": true,
+  "globals": {
+    "FastClick": true,
+    "FTScroller": true
+  }
+}
