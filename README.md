@@ -1,3 +1,2 @@
-# ftcwebapp
-FTC Web App Source Code Management
 # ftcpage
+FTC Web Page JS and SCSS source code

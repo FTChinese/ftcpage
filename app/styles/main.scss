@@ -1,4 +1,6 @@
 @import "bourbon/_bourbon.scss";
+@import "../../bower_components/origami/build.scss";
+@import "cicc.scss";
 
 // vendor prefix
 @mixin vendor-prefix($name, $argument) {
@@ -9,5 +11,234 @@
   #{$name}: #{$argument};
 }
 
-// old css old from the FTC web app
-@import "s.scss";
+body {background:#FFF1E0;margin:0;}
+//.o-ft-header__logo img {width:80px;height:80px;}
+//a:link,a:visited,a:active{color:#000;text-decoration:none;cursor:pointer;}
+//a:hover,a:active{color:#2e6e9e;text-decoration:none;}
+p{line-height:161.8%;padding-bottom:1em;}
+//.o-text-container {padding:8px;}
+img {
+	max-width:100%;
+	max-height:100%;
+}
+.clearfloat {
+	clear: both;
+}
+
+.cicc-logo {
+	width:254px;
+	height:100%;
+	background: url("http://s.ftimg.net/icon/png/ftc-wealth-logo.png");
+	background-image: url("http://s.ftimg.net/icon/svg/ftc-wealth-logo.svg");
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 240px auto;
+}
+
+//Gallery Images
+.c-galleries {
+	max-height: 375px;
+	overflow: hidden;
+	position: relative;
+}
+.c-gallery-container {
+	display: none;
+}
+.c-gallery {
+	height: 375px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	display: block;
+}
+.c-gallery-container.on {
+	display: block;
+}
+
+.c-gallery-dots {
+	width:100%;
+	bottom: 0;
+	position: absolute;
+	text-align: center;
+}
+.c-gallery-dot {
+	color: #aaa;
+	font-size: 36px;
+	display: inline;
+	line-height: 100%;
+}
+.c-gallery-dot.on {
+	color: white;
+}
+.c-banner-1 {
+	margin: 0 auto;
+	background-image: url(http://i.ftimg.net/picture/9/000050639_piclink.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	width: 100%;
+	height: 57px;
+}
+.c-banner-container {
+	border-bottom: 1px solid #ccc;
+	width: 1000px;
+	margin: 0 auto;
+}
+.c-product-title-container {
+	margin:14px auto;
+	width: 1000px;
+}
+.c-product-title {
+	background-image: url(http://i.ftimg.net/picture/5/000050595_piclink.jpg);
+	background-repeat: no-repeat;
+	height: 76px;
+}
+
+.c-section-container {
+	text-align: left;
+	width: 999px;
+	margin: 0 auto;
+	clear: both;
+}
+.c-section-title {
+	font-size: 1.2em;
+	font-weight: bold;
+	border-top: 4px solid #9E2F50;
+	padding-top: 5px;
+}
+@media (min-width: 45.625em) {
+	.cicc-logo {
+		width:285px;
+		background-size: 285px auto;
+	}
+}
+@media only screen and (min-width: 500px) {
+	.mobile-only {
+		display: none!important;
+	}
+}
+@media only screen and (max-width: 500px) {
+	.hide-on-mobile {
+		display:none!important;
+	}
+	.cicc-logo {
+		width:130px;
+	}
+	.c-gallery-dot {
+		font-size: 20px;
+	}
+}
+
+@media only screen and (max-width: 999px) {
+	.c-galleries {
+
+	}
+	.c-gallery-container {
+		position: relative;
+		padding-top: percentage(375/999);
+		height:0;
+	}
+	.c-gallery {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		background-size: auto 100%;
+		background-color: orange;
+	}
+	.c-gallery-dot {
+		font-size: 25px;
+	}
+	.c-banner-container {
+		background-color: #F9E8D5;
+		width: 100%;
+	}
+	.c-banner-1 {
+		background-position: right top;
+		width: 510px;
+	}
+	.c-product-title-container {
+		width: 100%;
+	}
+	.c-product-title {
+		width: 150px;
+		height: 40px;
+		background-size: auto 100%;
+	}
+	.c-section-container {
+		width: 100%;
+		div, p {
+			padding-left: 14px;
+			padding-right: 14px;
+		}
+	}
+	#content3 {
+		width: 100%;
+		height: auto;
+		padding: 0 14px 14px 14px;
+	}
+	#introduction {
+		width: auto;
+		height: auto;
+	}
+	#ciccintro, #wmintro {
+		width: 47%;
+		height: auto;
+	}
+	#ciccLogo, #wmLogo {
+		width: 250px;
+	}
+	.hr, .hr2 {
+		display: none;
+	}
+	.introHeader {
+		width: auto;
+	}
+	* {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+}
+
+
+@media only screen and (max-width: 550px) {
+	.c-banner-1 {
+		width: 350px;
+	}
+	#ciccintro, #wmintro {
+		width: auto;
+		float: none;
+	}
+}
+
+@media only screen and (max-width: 350px) {
+	.c-banner-1 {
+		width: 320px;
+		background-position: -665px top;
+	}
+}
+
+.animated {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+
+@-webkit-keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+}

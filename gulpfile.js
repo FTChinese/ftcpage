@@ -87,8 +87,8 @@ gulp.task('styles', function () {
 
 
 gulp.task('origami', function () {
-  getUrltoFile('http://build.origami.ft.com/bundles/js?modules=o-ft-header@^2.5.15,o-table@^1.6.0', './bower_components/origami/build.js');
-  getUrltoFile ('http://build.origami.ft.com/bundles/css?modules=o-ft-header@^2.5.15,o-ft-footer@^2.0.4,o-table@^1.6.0', './bower_components/origami/build.scss');
+  getUrltoFile('http://build.origami.ft.com/bundles/js?modules=o-header@^3.0.1,o-table@^1.6.0', './bower_components/origami/build.js');
+  getUrltoFile ('http://build.origami.ft.com/bundles/css?modules=o-header@^3.0.1,o-footer@^3.0.0,o-table@^1.6.0', './bower_components/origami/build.scss');
 });
 
 
@@ -199,7 +199,7 @@ gulp.task('connect', ['styles'], function () {
     .use(serveIndex('app'));
 
   require('http').createServer(app)
-    .listen(9000)
+    .listen(9000, '0.0.0.0')
     .on('listening', function () {
       console.log('Started connect web server on http://localhost:9000');
     });

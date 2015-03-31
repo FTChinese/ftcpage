@@ -1,0 +1,1402 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, "微软雅黑" !important;
+    font-size: 14px;
+}
+
+/* content */
+#content {
+    width: 100%;
+    
+    height: 100%;
+    margin: 0px auto;
+}
+
+#content2 {
+    width: 100%;
+    
+    height: 100%;
+    margin: 0px auto;
+}
+
+#content3 {
+    width: 100%;
+    
+    height: 540px;
+    margin: 0px auto;
+}
+
+#column3 {
+    width: 1020px;
+    height: 100%;
+    margin: 0px auto;
+    
+    text-align: left;
+}
+
+#column4 {
+    width: 1020px;
+    height: 100%;
+    margin: 0px auto;
+    
+    text-align: left;
+}
+
+#column2Title {
+    width: 717px;
+    height: 71px;
+    background: url(http://www.ciccs.com.cn/resources/images/ifeng/21.png) no-repeat;
+    margin-top: 20px;
+}
+
+#smallColumn {
+    width: 1000px;
+    margin: 20px auto;
+    _margin: 0 auto;
+    text-align: left;
+}
+
+#smallColumn .secTop {
+    width: 1000px;
+}
+
+*+html #smallColumn {
+    margin: 0px;
+}
+
+.section {
+    margin-top: 20px;
+    background: #fff;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+}
+
+.secTop {
+    width: 270px;
+    height: 3px;
+    overflow: hidden;
+    background: #640000;
+    position: absolute;
+    left: -1px;
+    top: 0px;
+}
+
+.secHead {
+    background: url(http://www.ciccs.com.cn/resources/images/ifeng/12.jpg) repeat-x;
+    height: 42px;
+    padding: 10px 12px;
+    font-size: 18px;
+}
+
+#tel {
+    background: url(http://www.ciccs.com.cn/resources/images/ifeng/10.jpg) no-repeat;
+    height: 50px;
+    width: 39px;
+    top: 30px;
+    left: 15px;
+    position: absolute;
+}
+
+*+html .blockContent {
+    line-height: 27px;
+    margin-bottom: 2px;
+    background-color: #ffffff;
+}
+
+.lastBlock {
+    margin-bottom: 35px;
+}
+
+.divider {
+    clear: both;
+    height: 1px;
+    width: 100%;
+}
+
+.p1 {
+    font-size: 16px;
+}
+
+.p2 {
+    font-size: 16px;
+    color: #640000;
+}
+
+.p3 {
+    color: #be8c4b;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#telText {
+    line-height: 42px;
+    position: absolute;
+    top: -5px;
+    left: 80px;
+    width: 150px;
+    height: 100px;
+}
+
+#contactUsContent {
+    height: 255px;
+    _height: 264px;
+}
+
+*+html #contactUsContent {
+    height: 275px;
+}
+
+#contactUsContent .text {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.telNo {
+    background: url(http://www.ciccs.com.cn/resources/images/ifeng/22.png) no-repeat;
+    color: #640000;
+    font-weight: 700;
+    height: 35px;
+    padding-left: 35px;
+    padding-top: 5px;
+    width: 150px;
+    margin: 3px auto;
+    _margin-left: 40px;
+}
+
+.website {
+    background: url(http://www.ciccs.com.cn/resources/images/ifeng/23.png) no-repeat;
+    color: #640000;
+    font-weight: 700;
+    height: 30px;
+    padding-left: 35px;
+    padding-top: 2px;
+    width: 150px;
+    margin: 3px auto;
+    _margin-left: 40px;
+}
+
+.p12 {
+    background: url(http://www.ciccs.com.cn/resources/images/ifeng/24.png) no-repeat 0px 6px;
+    padding: 0px 0px 0px 10px;
+    font-size: 12px;
+    margin: 0px 0px 0px 15px;;
+}
+
+.ciccRed {
+    color: #640000;
+    font-weight: 700;
+}
+
+.website a:visited, .website a {
+    color: #640000;
+}
+
+.ciccYellow {
+    color: #be8c4b;
+    font-size: 13px;
+}
+
+#reserveNow {
+    background: url(http://www.ciccs.com.cn/resources/images/ifeng/13.png) no-repeat;
+    width: 258px;
+    height: 56px;
+    position: absolute;
+    right: 18px;
+}
+
+#forum2014 {
+    background: url(http://www.ciccs.com.cn/resources/images/ifeng/26.png) no-repeat;
+    _background: url(http://www.ciccs.com.cn/resources/images/ifeng/26.gif) no-repeat;
+    width: 288px;
+    height: 51px;
+    position: absolute;
+    bottom: 20px;
+    left: 18px;
+}
+
+#prodIntro {
+    width: 100%;
+    background: url(http://www.ciccs.com.cn/resources/images/ifeng/14.jpg) repeat-x #fff;
+    border: 1px solid #ccc;
+    margin-top: 7px;
+    color: #333;
+    text-align: justify;
+}
+
+#prodContent {
+    margin: 20px;
+}
+
+.p4 {
+    color: #be1f1f;
+    font-style: italic;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.p5 {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+#introDivider {
+    width: 100%;
+    height: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+.prodSection {
+    margin: 20px;
+}
+
+.pp6 {
+    font-size: 16px;
+    font-weight: 700;
+    background: url(http://www.ciccs.com.cn/resources/images/ifeng/15.jpg) no-repeat 0px 14px;
+    padding-left: 20px;
+}
+
+.p6 {
+    font-size: 16px;
+    font-weight: 700;
+    background: url(http://www.ciccs.com.cn/resources/images/ifeng/15.jpg) no-repeat 0px 4px;
+    padding-left: 20px;
+}
+
+.p7 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #be1f1f;
+}
+
+.pp7 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #be1f1f;
+}
+
+.p8 {
+    font-size: 16px;
+    font-style: italic;
+}
+
+.p9 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #be1f1f;
+}
+
+#reserveTable2 {
+    margin-top: 10px;
+}
+
+.p10 {
+    font-size: 16px;
+    font-weight: 700;
+    background: url(http://www.ciccs.com.cn/resources/images/ifeng/11.jpg) no-repeat 0px 2px;
+    padding-left: 20px;
+}
+
+#smallColumnContent {
+    width: 100%;
+    height: 180px;
+    border: 1px solid #ccc;
+}
+
+#listReserveBtn {
+    text-decoration: underline;
+}
+
+* html, * html body {
+    background-image: url(about:blank);
+    background-attachment: fixed;
+}
+
+.p11 {
+    background: url(http://www.ciccs.com.cn/resources/images/ifeng/18.jpg) no-repeat 5px 8px;
+    text-align: justify;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 15px;
+}
+
+.firstP {
+    margin-top: 0px;
+    _margin-top: 10px;
+}
+
+#graph2 {
+    margin: 10px 15px 15px 20px;
+}
+
+#footer_wrapper {
+    width: 100%;
+    border-top: 1px solid #ccc;
+    _height: 100px;
+    margin-top: 20px;
+}
+
+.footer {
+    width: 1000px;
+    margin: 0 auto;
+    font-family: "宋体";
+    font-size: 12px;
+}
+
+.footer .footlink {
+    color: #000;
+    height: 28px;
+    _height: 48px;
+    line-height: 28px;
+    padding-top: 15px;
+    border-top: 1px solid #fff;
+    overflow: hidden;
+}
+
+.footer .footlink a {
+    color: #000;
+    text-decoration: none
+}
+
+.footer .footlink span {
+    padding: 0 5px;
+}
+
+.footer .fk_l {
+    float: left;
+}
+
+.footer .fk_r {
+    width: 250px;
+    float: right;
+    margin-top: -12px;
+    _margin-top: 0px;
+}
+
+*+html .footer .fk_r {
+    margin-top: 0px;
+}
+
+.footer .fk_r ul {
+    overflow: hidden;
+}
+
+.footer .fk_r ul li {
+    height: 28px;
+    line-height: 28px;
+    overflow: hidden;
+    float: left;
+}
+
+.footer .fk_r ul .l_bg001 {
+    background: url(http://y1.ifengimg.com/38716b164e0f5e63/2013/0716/nav0416_14.gif) no-repeat left 9px;
+    padding-left: 19px;
+}
+
+.footer .fk_r ul .l_bg002 {
+    background: url(http://y3.ifengimg.com/9db17ab793eef980/2013/0403/nav0416_17.gif) no-repeat left 9px;
+    padding-left: 17px;
+    margin-left: 18px;
+}
+
+.footer .copyright {
+    font-family: Arial;
+    color: #666;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.footer .copyright span {
+    font-family: "宋体";
+}
+
+/*product divide*/
+#product_divide {
+    min-width: 1255px;
+    width: 100%;
+    height: 18px;
+    position: relative;
+    margin-top: 10px;
+    background: url(http://www.ciccs.com.cn/resources/images/ifeng/ifeng_store/wave3.png) repeat-x;
+}
+
+#product_divide2 {
+    min-width: 1255px;
+    width: 100%;
+    height: 18px;
+    position: relative;
+    margin-top: 10px;
+    background: url(http://www.ciccs.com.cn/resources/images/ifeng/ifeng_store/wave.png) repeat-x;
+}
+
+/* product table */
+.prodTable {
+    white-space: nowrap;
+    width: 1000px;
+    margin: 0px auto;
+    margin-top: 16px;
+    border-top: gray solid 1px;
+    border-spacing: 0px;
+}
+
+.prodTable .prodTableHeader {
+    height: 20px;
+    background: #FAFBFC;
+}
+
+.prodTable tr td {
+    border-bottom: gray solid 1px;
+    text-align: left;
+    border-color: #c9c9c9
+}
+
+.prodTable .prodTableHeadTD {
+    font-size: 18px;
+}
+
+.prodTable td {
+    font-size: 16px;
+    padding: 3px 8px;
+    border-collapse: collapse;
+}
+
+.oddTr {
+    height: 40px;
+}
+
+.evenTr {
+    height: 40px;
+    background: #FAFBFC;
+}
+
+.prodTable td a {
+    color: #DD300E;
+    font-size: 18px;
+}
+
+.ror {
+    color: #dd300e;
+    font-size: 18px;
+}
+
+.clickMore {
+    height: 50px;
+    margin: 10px auto;
+    width: 1000px;
+}
+
+#clickMorePE {
+    width: 175px;
+    height: 21px;
+    background: url(http://www.ciccs.com.cn/resources/images/ifeng/ifeng_store/clickmore.png) no-repeat;
+    background-position: center;
+}
+
+#clickMorePE2 {
+    width: 175px;
+    height: 21px;
+    background: url(http://www.ciccs.com.cn/resources/images/ifeng/ifeng_store/clickmore2.png) no-repeat;
+    background-position: center;
+}
+
+#clickMoreFI {
+    width: 203px;
+    height: 21px;
+    background: url(http://www.ciccs.com.cn/resources/images/ifeng/ifeng_store/clickmore02.png) no-repeat;
+    background-position: center;
+}
+
+#clickMoreFI2 {
+    width: 203px;
+    height: 21px;
+    background: url(http://www.ciccs.com.cn/resources/images/ifeng/ifeng_store/clickmore01.png) no-repeat;
+    background-position: center;
+}
+
+/* highlight zone */
+
+#pe_product {
+    width: 1030px;
+    height: 347px;
+    margin: 0px auto;
+    margin-left: 10px;
+}
+
+#fi_product {
+    width: 1030px;
+    height: 347px;
+    margin: 0px auto;
+    margin-left: 10px;
+}
+
+.f_block {
+    width: 256px;
+    height: 353px;
+    position: relative;
+    margin-bottom: 10px;
+    
+    overflow: hidden;
+    float: left;
+}
+
+.f_block1 {
+    width: 256px;
+    height: 353px;
+    position: relative;
+    margin-bottom: 10px;
+    
+    overflow: hidden;
+    float: left;
+}
+
+.f_title {
+    height: 45px;
+    padding-top: 6px;
+    color: #ffffff;
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.f_rortitle {
+    height: 15px;
+    padding-top: 10px;
+    color: #434343;
+    font-size: 16px;
+    text-align: center;
+}
+
+.f_profit {
+    height: 50px;
+    padding-top: 10px;
+    color: #DD300E;
+    font-size: 44px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.f_slogon {
+    height: 43px;
+    color: #434343;
+    font-size: 16px;
+    font-weight: bold;
+    padding-top: 5px;
+    width: 200px;
+    margin-left: 13px;
+    vertical-align: bottom;
+    text-align: center;
+}
+
+.f_opentime {
+    height: 15px;
+    padding-top: 2px;
+    color: black;
+    font-size: 16px;
+    text-align: center;
+}
+
+.f_openperiod {
+    height: 26px;
+    padding-top: 11px;
+    color: black;
+    font-size: 16px;
+    text-align: center;
+}
+
+.f_link {
+    height: 35px;
+    top: 10px;
+    background: url(http://www.ciccs.com.cn/resources/images/ifeng/ifeng_store/btnbg3.png) no-repeat;
+    text-align: center;
+    background-position: center;
+}
+
+.f_linkclosed {
+    height: 35px;
+    top: 10px;
+    background: url(http://www.ciccs.com.cn/resources/images/ifeng/ifeng_store/btnbg2.png) no-repeat;
+    text-align: center;
+    background-position: center;
+}
+
+.f_linkopen {
+    height: 35px;
+    top: 10px;
+    background: url(http://www.ciccs.com.cn/resources/images/ifeng/ifeng_store/btnbg1.png) no-repeat;
+    text-align: center;
+    background-position: center;
+}
+
+.f_closed {
+    height: 35px;
+    padding-top: 15px;
+    background: url(http://www.ciccs.com.cn/resources/images/ifeng/ifeng_store/icon06.png) no-repeat;
+    text-align: center;
+    background-position: center;
+}
+
+.f_closed2 {
+    width: 81px;
+    height: 60px;
+    margin-top: -60px;
+    background: url(http://www.ciccs.com.cn/resources/images/ifeng/ifeng_store/sel.png) no-repeat;
+    float: right;
+    position: relative;
+}
+
+.f_opensoon {
+    height: 35px;
+    padding-top: 15px;
+    text-align: center;
+    background: url(http://www.ciccs.com.cn/resources/images/ifeng/ifeng_store/icon07.png) no-repeat;
+    background-position: center;
+}
+
+.f_reserv_active {
+    height: 35px;
+    padding-top: 15px;
+    text-align: center;
+    background: url(http://www.ciccs.com.cn/resources/images/ifeng/ifeng_store/icon05_2.png) no-repeat;
+    background-position: center;
+}
+
+.f_reserv_active_hover {
+    height: 35px;
+    padding-top: 15px;
+    text-align: center;
+    background: url(http://www.ciccs.com.cn/resources/images/ifeng/ifeng_store/icon05.png) no-repeat;
+    background-position: center;
+}
+
+.f_reserv {
+    height: 35px;
+    padding-top: 15px;
+    text-align: center;
+    background: url(http://www.ciccs.com.cn/resources/images/ifeng/ifeng_store/icon05_1.png) no-repeat;
+    background-position: center;
+}
+
+.blockcontent {
+    width: 228px;
+    height: 325px;
+    background: url(http://www.ciccs.com.cn/resources/images/ifeng/ifeng_store/hlbg.png) no-repeat;
+}
+
+/* introduction */
+#introduction {
+    width: 998px;
+    height: 500px;
+    margin: 0px auto;
+    text-align: left;
+}
+
+#ciccintro {
+    width: 486px;
+    height: 500px;
+    background: #f5f2ed;
+    float: left;
+    text-align: left;
+    margin-top: 20px;
+}
+
+#wmintro {
+    width: 490px;
+    height: 500px;
+    background: #f5f2ed;
+    float: right;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.introContent {
+    position: relative;
+    padding: 8px;
+    background-color: #f5f2ed;
+}
+
+.introHeader {
+    width: 490px;
+    height: 60px;
+    margin-top: 10px;
+}
+
+#ciccLogo {
+    background: url(http://www.ciccs.com.cn/resources/images/ifeng/ifeng_store/logo.png) no-repeat;
+    height: 52px;
+    margin-left: 16px;
+    width: 450px;
+    float: left;
+}
+
+#ciccTitle {
+    float: right;
+    font-size: 18px;
+    margin-top: 42px;
+    margin-right: 16px;
+}
+
+.hr {
+    width: 444px;
+    margin-top: 6px;
+    margin-left: 20px;
+    float: left;
+}
+
+.hr2 {
+    width: 448px;
+    margin-top: 6px;
+    margin-left: 20px;
+    float: left;
+}
+
+.block {
+    margin: 30px 12px 10px;
+}
+
+.block .title {
+     color: #640000;
+     font-size: 16px;
+     font-weight: 700;
+     height: 35px;
+ }
+
+.block .title span {
+    color: #be8c4b;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.blockContent {
+    text-align: justify;
+    color: #333;
+    line-height: 24px;
+    _line-height: 31px !important;
+}
+
+#wmLogo {
+    background: url(http://www.ciccs.com.cn/resources/images/ifeng/ifeng_store/logo02.png) no-repeat;
+    height: 53px;
+    margin-left: 20px;
+    width: 450px;
+    float: left;
+}
+
+#wmTitle {
+    float: right;
+    font-size: 18px;
+    margin-top: 42px;
+    margin-right: 16px;
+}
+
+/* pop up window */
+#errorPopup {
+    display: none;
+}
+
+#mask {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background: #333;
+    opacity: 0.6;
+    -moz-opacity: 0.6;
+    filter: alpha(opacity=60);
+    z-index: 100;
+    cursor: pointer
+}
+
+#errorDialog {
+    width: 341px;
+    height: 167px;
+    background: url(http://www.ciccs.com.cn/resources/images/ifeng/19.png) no-repeat;
+    _background: url(http://www.ciccs.com.cn/resources/images/ifeng/19.gif) no-repeat;
+    z-index: 101;
+    position: absolute;
+    top: 200px;
+    left: 400px;
+    text-align: center;
+}
+
+#close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-family: Arial;
+    font-size: 16px;
+    font-weight: bold;
+    color: #666;
+    cursor: pointer
+}
+
+#errorText {
+    padding: 40px 30px 15px;
+    margin: 15px 0px 5px;
+    font-size: 16px;
+}
+
+#return {
+    width: 141px;
+    height: 34px;
+    background: url(http://www.ciccs.com.cn/resources/images/ifeng/20.png) no-repeat;
+    margin: 0px auto;
+    cursor: pointer
+}
+
+#bookPopup {
+    display: none;
+}
+
+#popupmask {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background: #333;
+    opacity: 0.6;
+    -moz-opacity: 0.6;
+    filter: alpha(opacity=60);
+    z-index: 100;
+    cursor: pointer
+}
+
+#popupDialog {
+    width: 557px;
+    height: 375px;
+    background: url(http://www.ciccs.com.cn/resources/images/ifeng/ifeng_store/popup.png) no-repeat;
+    z-index: 9999;
+    position: fixed;
+    left: 356px;
+    text-align: center;
+}
+
+#popupDialogCicc {
+    width: 557px;
+    height: 375px;
+    background: url(http://www.ciccs.com.cn/resources/images/ifeng/ifeng_store/popupcicc.png) no-repeat;
+    z-index: 9999;
+    position: fixed;
+    left: 356px;
+    text-align: center;
+}
+
+#popupclose {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 19px;
+    right: 16px;
+    background: url(http://www.ciccs.com.cn/resources/images/ifeng/ifeng_store/X.png) no-repeat;
+    cursor: pointer
+}
+
+#popupreturn {
+    width: 141px;
+    height: 34px;
+    background: url(http://www.ciccs.com.cn/resources/images/ifeng/20.png) no-repeat;
+    margin: 0px auto;
+    cursor: pointer
+}
+
+#popupProductName {
+    color: black;
+    float: left;
+    font-size: 20px;
+    margin-left: 37px;
+    margin-top: 20px;
+}
+
+#popupProductNamePosfix {
+    color: black;
+    float: left;
+    font-size: 20px;
+    margin-left: 7px;
+    margin-top: 20px;
+}
+
+#popupnote {
+    color: darkgray;
+    font-size: 16px;
+    position: relative;
+}
+
+.reserveTable {
+}
+
+#popupContent {
+    margin: 84px 0px;
+}
+
+#popupSuccess {
+    display: none;
+    margin: 100px 0px;
+}
+
+#popSuccessContent {
+    background: url(http://www.ciccs.com.cn/resources/images/ifeng/ifeng_store/popupSuccess.png) no-repeat;
+    width: 231px;
+    height: 46px;
+    top: 20px;
+    margin: 0px auto;
+    margin-left: 148px;
+}
+
+#popupErrorMsg {
+    background: url(http://www.ciccs.com.cn/resources/images/ifeng/ifeng_store/popupErrorMsg.png) no-repeat;
+    display: none;
+    color: darkgray;
+    font-size: 16px;
+    float: left;
+    height: 20px;
+    margin-left: 121px;
+    width: 356px;
+}
+
+#popupBlank {
+    background-color: white;
+    width: 506px;
+    height: 146px;
+    top: 20px;
+    margin: 0px auto;
+    margin-left: 32px;
+}
+
+.reserveTable table {
+    margin-left: 5px;
+}
+
+.reserveTable td {
+    white-space: nowrap;
+}
+
+.reserveTable input {
+    height: 24px;
+}
+
+.nameInput {
+    width: 272px;
+}
+
+.reservBtn {
+    background: url(http://www.ciccs.com.cn/resources/images/ifeng/ifeng_store/R.png) no-repeat;
+    height: 45px;
+    width: 200px;
+    cursor: pointer;
+    margin-left: 172px;
+    margin-top: 5px;
+    float: left;
+}
+
+.t1 {
+    font-size: 16px;
+    height: 40px;
+    text-align: center;
+}
+
+.t2 {
+    font-size: 16px;
+    height: 40px;
+    width: 121px;
+    text-align: left;
+}
+
+/* to top */
+#toTop {
+    position: fixed;
+    _position: absolute;
+    right: 10px;
+    bottom: 25px;
+    _top: expression(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-40);
+    cursor: pointer;
+    display: none;
+}
+
+/* hanging erweima */
+/*#erweima_hang{*/
+/*position:fixed;*/
+/*right:10px;*/
+/*bottom:150px;*/
+/*display:block;*/
+/*}*/
+
+/* popup Login related CSS */
+#thirdpageMaskWrapper {
+    display: none;
+}
+
+#thirdpageMask {
+    width: 100%;
+    height: 100%;
+    background: #333;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 0.45;
+    -moz-opacity: 0.45;
+    filter: alpha(opacity=50);
+    z-index: 100000;
+}
+
+#thirdpopUpLoginWrapper {
+    background: url(http://www.ciccs.com.cn/resources/images/common/login_panel.png) no-repeat;
+    width: 380px;
+    height: 307px;
+    position: absolute;
+    z-index: 100001;
+    /*top: 200px;*/
+    /*left: 200px;*/
+    left: 35%;
+    top: 30%;
+    position: fixed !important;
+    _top: expression(eval(document.compatMode && document.compatMode=='CSS1Compat')?
+    documentElement.scrollTop + (document.documentElement.clientHeight - this.offsetHeight)/2: /**//*IE6*/
+    document.body.scrollTop + (document.body.clientHeight - this.clientHeight)/2);
+    text-align: left;
+    display: none
+}
+
+#thirdpopUpLoginWrapper .title {
+    width: 100%;
+    height: 30px;
+    cursor: move
+}
+
+#thirdpopUpLoginWrapper .name {
+    color: #640000;
+    font-weight: bold;
+    font-family: "微软雅黑";
+    font-size: 14px;
+    width: 40px;
+    height: 20px;
+    margin: 4px 15px;
+    float: left
+}
+
+#thirdpopUpLoginWrapper .closePanel {
+    background: url(http://www.ciccs.com.cn/resources/images/common/login_panel_close.png) no-repeat;
+    width: 14px;
+    height: 13px;
+    cursor: pointer;
+    float: right;
+    margin: 8px 10px
+}
+
+#thirdpopUpLoginWrapper .formWrapper {
+    color: #666;
+    padding-left: 50px;
+    padding-top: 5px;
+}
+
+#thirdpopUpLoginWrapper .inputLabel {
+    display: block;
+    float: left;
+    width: 60px;
+    padding-top: 10px
+}
+
+#thirdpopUpLoginWrapper .form_input {
+    width: 200px;
+    height: 15px !important;
+    float: left;
+}
+
+#thirdpopUpLoginWrapper .item {
+    clear: both;
+    margin-top: 2px
+}
+
+#thirdpopUpLoginWrapper .popupLoginBtns {
+    padding-left: 55px
+}
+
+#thirdpopUpLoginWrapper label.error {
+    display: block;
+    clear: both;
+    margin-left: 60px;
+    padding: 0px;
+    margin-bottom: -8px;
+    margin-top: -12px;
+    font-size: 12px;
+}
+
+#thirdpopUpLoginWrapper .popupLoginBtn {
+    background: url(http://www.ciccs.com.cn/resources/images/home/login_btn.png) no-repeat;
+    width: 46px;
+    height: 20px;
+    float: left;
+    cursor: pointer;
+    margin-top: 4px;
+    border: none
+}
+
+#thirdpopUpLoginWrapper .popupLoginBtns {
+    padding-left: 55px
+}
+
+#thirdpopUpLoginWrapper .popupLoginBtncicc {
+    background: url(http://www.ciccs.com.cn/resources/images/ifeng/ifeng_store/login.png) no-repeat scroll 0% 0% transparent;
+    background-position: center;
+    width: 169px;
+    height: 37px;
+    cursor: pointer;
+    margin-top: 8px;
+    border: medium none;
+}
+#thirdpopUpLoginWrapper .popupregunderlinered {
+    margin-left: 60px;
+    font-size: 12px;
+    padding-top: 3px;
+    color: #374455;
+    margin-top: 4px;
+    color: #6B0101;
+    text-decoration:underline
+}
+
+#popupLoginForgetPwd {
+    display: block;
+    float: left;
+    margin-left: 10px;
+    padding-top: 3px;
+    color: #374455;
+    margin-top: 4px
+}
+
+#popupRegBtn {
+    background: url(http://www.ciccs.com.cn/resources/images/home/reg_btn.png) no-repeat;
+    width: 184px;
+    height: 30px;
+    display: block;
+    margin-top: 7px;
+    margin-left: 54px
+}
+
+#thirdpageMaskWrapper .autoLogin {
+    padding-left: 51px;
+    margin-left: 0px;
+    margin-top: 5px;
+}
+
+#regpageMaskWrapper {
+    display: none;
+}
+
+#regpageMask {
+    width: 100%;
+    height: 100%;
+    background: #333;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 0.45;
+    -moz-opacity: 0.45;
+    filter: alpha(opacity=50);
+    z-index: 100000;
+}
+
+#regpopUpWrapper {
+    background: url(http://www.ciccs.com.cn/resources/images/common/login_panel.png) no-repeat;
+    width: 380px;
+    height: 307px;
+    position: absolute;
+    z-index: 100001;
+    /*top: 200px;*/
+    /*left: 200px;*/
+    left:50%;
+    top: 30%;
+    position: fixed !important;
+    _top: expression(eval(document.compatMode && document.compatMode=='CSS1Compat')?
+    documentElement.scrollTop + (document.documentElement.clientHeight - this.offsetHeight)/2: /**//*IE6*/
+    document.body.scrollTop + (document.body.clientHeight - this.clientHeight)/2);
+    text-align: left;
+    display: none
+}
+
+#regpopUpWrapper .title {
+    width: 100%;
+    height: 30px;
+    cursor: move
+}
+
+#regpopUpWrapper .name {
+    color: #640000;
+    font-weight: bold;
+    font-family: "微软雅黑";
+    font-size: 14px;
+    width: 40px;
+    height: 20px;
+    margin: 4px 15px;
+    float: left
+}
+
+#regpopUpWrapper .closePanel {
+    background: url(http://www.ciccs.com.cn/resources/images/common/login_panel_close.png) no-repeat;
+    width: 14px;
+    height: 13px;
+    cursor: pointer;
+    float: right;
+    margin: 8px 10px
+}
+
+#regpopUpWrapper .formWrapper {
+    color: #666;
+    padding-left: 50px;
+    padding-top: 5px;
+}
+
+#regpopUpWrapper .inputLabel {
+    display: block;
+    float: left;
+    width: 60px;
+    padding-top: 10px
+}
+
+#regpopUpWrapper .form_input {
+    width: 200px;
+    height: 15px !important;
+    float: left;
+}
+
+#regpopUpWrapper .item {
+    clear: both;
+    margin-top: 2px
+}
+
+#regpopUpWrapper .popupLoginBtns {
+    padding-left: 55px
+}
+
+#regpopUpWrapper label.error {
+    display: block;
+    clear: both;
+    margin-left: 80px;
+    padding: 0px;
+    margin-bottom: -8px;
+    margin-top: -12px;
+    font-size: 12px;
+}
+
+#regpopUpWrapper .popupLoginBtn {
+    background: url(http://www.ciccs.com.cn/resources/images/home/login_btn.png) no-repeat;
+    width: 46px;
+    height: 20px;
+    float: left;
+    cursor: pointer;
+    margin-top: 4px;
+    border: none
+}
+
+#regpopUpWrapper {
+    display: block;
+    float: left;
+    margin-left: 10px;
+    padding-top: 3px;
+    color: #374455;
+    margin-top: 4px
+}
+
+#popupRegBtn {
+    background: url(http://www.ciccs.com.cn/resources/images/home/reg_btn.png) no-repeat;
+    width: 184px;
+    height: 30px;
+    display: block;
+    margin-top: 7px;
+    margin-left: 54px
+}
+
+.colorname {
+    color: #D1AE80;
+}
+
+.namethre {
+    font-weight: bold;
+    font-family: "微软雅黑";
+    font-size: 16px;
+    width: 40px;
+    height: 20px;
+    margin: 18px 35px;
+    float: left;
+}
+
+#popupLoginForgetPwdcicc {
+    margin-left: 60px;
+    font-size: 12px;
+    padding-top: 3px;
+    color: #374455;
+    margin-top: 4px;
+    color: #6B0101;
+    text-decoration: underline
+}
+
+
+#popupRegBtncicc {
+    background: url(http://www.ciccs.com.cn/resources/images/ifeng/ifeng_store/signup.png) no-repeat scroll 0% 0% transparent;
+    background-position: center;
+    width: 57px;
+    height: 31px;
+    margin-top: -25px;
+    display: block;
+    margin-left: 240px;
+    cursor: pointer;
+}
+#regpopUpWrapper .popupRegPhoneval {
+    background: url(http://www.ciccs.com.cn/resources/images/ifeng/ifeng_store/phoneval.png) no-repeat scroll 0% 0% transparent;
+    background-position: center;
+    width: 112px;
+    height: 26px;
+    cursor: pointer;
+    margin-top: 5px;
+    border: medium none;
+    color: #ffffff;
+}
+#regpopUpWrapper .popupRegPhonevallater {
+    background: url(http://www.ciccs.com.cn/resources/images/ifeng/ifeng_store/phonegrey.png) no-repeat scroll 0% 0% transparent;
+    background-position: center;
+    width: 112px;
+    height: 26px;
+    cursor: pointer;
+    margin-top: 5px;
+    border: medium none;
+    color: #ffffff;
+}
+#regpopUpWrapper .popupRegSign {
+    background: url(http://www.ciccs.com.cn/resources/images/ifeng/ifeng_store/zhuce.png) no-repeat scroll 0% 0% transparent;
+    background-position: center;
+    width: 169px;
+    height: 37px;
+    cursor: pointer;
+    margin-top: 5px;
+    border: medium none;
+}
+#backlogin {
+    cursor: pointer;
+    display: block;
+    width: 80px;
+    height: 50px;
+    margin-left: 180px;
+    margin-top: -35px;
+    font-size: 12px;
+    color: #7f2d00;
+    text-decoration:underline
+}
+#header0Template
+{
+    width:100%;
+    height: 20px;
+    margin:0px auto;
+    background-color: white;
+    text-align: center;
+}
+#header0_1Template
+{
+    width: 1000px;
+    height: 20px;
+    text-align: left;
+    margin:0px auto;
+}
