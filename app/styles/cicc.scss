@@ -644,7 +644,8 @@ body {
     width: 81px;
     height: 60px;
     margin-top: -60px;
-    background: url(http://www.ciccs.com.cn/resources/images/ifeng/ifeng_store/sel.png) no-repeat;
+    background-image: url(http://www.ciccs.com.cn/resources/images/ifeng/ifeng_store/sel.png);
+    background-repeat: no-repeat;
     float: right;
     position: relative;
 }
@@ -653,7 +654,8 @@ body {
     height: 35px;
     padding-top: 15px;
     text-align: center;
-    background: url(http://www.ciccs.com.cn/resources/images/ifeng/ifeng_store/icon07.png) no-repeat;
+    background-image: url(http://www.ciccs.com.cn/resources/images/ifeng/ifeng_store/icon07.png);
+    background-repeat: no-repeat;
     background-position: center;
 }
 
@@ -661,7 +663,8 @@ body {
     height: 35px;
     padding-top: 15px;
     text-align: center;
-    background: url(http://www.ciccs.com.cn/resources/images/ifeng/ifeng_store/icon05_2.png) no-repeat;
+    background-image: url(http://www.ciccs.com.cn/resources/images/ifeng/ifeng_store/icon05_2.png);
+    background-repeat: no-repeat;
     background-position: center;
 }
 
@@ -669,7 +672,8 @@ body {
     height: 35px;
     padding-top: 15px;
     text-align: center;
-    background: url(http://www.ciccs.com.cn/resources/images/ifeng/ifeng_store/icon05.png) no-repeat;
+    background-image: url(http://www.ciccs.com.cn/resources/images/ifeng/ifeng_store/icon05.png);
+    background-repeat: no-repeat;
     background-position: center;
 }
 
@@ -677,14 +681,16 @@ body {
     height: 35px;
     padding-top: 15px;
     text-align: center;
-    background: url(http://www.ciccs.com.cn/resources/images/ifeng/ifeng_store/icon05_1.png) no-repeat;
+    background-image: url(http://www.ciccs.com.cn/resources/images/ifeng/ifeng_store/icon05_1.png);
+    background-repeat: no-repeat;
     background-position: center;
 }
 
 .blockcontent {
     width: 228px;
     height: 325px;
-    background: url(http://www.ciccs.com.cn/resources/images/ifeng/ifeng_store/hlbg.png) no-repeat;
+    background-image: url(http://www.ciccs.com.cn/resources/images/ifeng/ifeng_store/hlbg.png);
+    background-repeat: no-repeat;
 }
 
 /* introduction */

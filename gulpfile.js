@@ -85,12 +85,10 @@ gulp.task('styles', function () {
     .pipe(gulp.dest('.tmp/styles'));
 });
 
-
 gulp.task('origami', function () {
-  getUrltoFile('http://build.origami.ft.com/bundles/js?modules=o-header@^3.0.1,o-table@^1.6.0', './bower_components/origami/build.js');
-  getUrltoFile ('http://build.origami.ft.com/bundles/css?modules=o-header@^3.0.1,o-footer@^3.0.0,o-table@^1.6.0', './bower_components/origami/build.scss');
+  getUrltoFile('http://build.origami.ft.com/bundles/js?modules=o-table@^1.6.0', './bower_components/origami/build.js');
+  getUrltoFile ('http://build.origami.ft.com/bundles/css?modules=o-footer@^3.0.0,o-table@^1.6.0', './bower_components/origami/build.scss');
 });
-
 
 gulp.task('ea', function () {
   var message = {};
@@ -239,7 +237,18 @@ gulp.task('watch', ['connect'], function () {
 });
 
 gulp.task('copy', ['build'], function () {
-
+  var replace = require('gulp-replace');
+  var rename = require("gulp-rename");
+  var thedatestamp = new Date().getTime();
+  gulp.src('dist/cicc-wealth.html')
+    .pipe(replace(/styles\/bundle\-cicc\-1\.css/g, 'http://s.ftimg.net/styles/bundle-cicc-1.css?' + thedatestamp))
+    .pipe(replace(/scripts\/bundle\-cicc\-1\.js/g, 'http://s.ftimg.net/js/bundle-cicc-1.js?' + thedatestamp))
+    .pipe(gulp.dest('../testing/dev_www/frontend/tpl/marketing'))
+    .pipe(gulp.dest('../dev_www/frontend/tpl/marketing'));
+  gulp.src('dist/styles/*.css')
+    .pipe(gulp.dest('../dev_www/frontend/static/styles'));
+  gulp.src('dist/scripts/*.js')
+    .pipe(gulp.dest('../dev_www/frontend/static/js'));
 });
 
 

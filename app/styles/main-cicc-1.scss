@@ -2,6 +2,7 @@
 @import "../../bower_components/origami/build.scss";
 @import "cicc.scss";
 
+
 // vendor prefix
 @mixin vendor-prefix($name, $argument) {
   -webkit-#{$name}: #{$argument};
@@ -10,6 +11,11 @@
   -o-#{$name}: #{$argument};
   #{$name}: #{$argument};
 }
+
+// variables
+$headerHeight: 50px;
+$padding: 14px;
+$buttonHeight: 36px;
 
 body {background:#FFF1E0;margin:0;}
 //.o-ft-header__logo img {width:80px;height:80px;}
@@ -25,21 +31,13 @@ img {
 	clear: both;
 }
 
-.cicc-logo {
-	width:254px;
-	height:100%;
-	background: url("http://s.ftimg.net/icon/png/ftc-wealth-logo.png");
-	background-image: url("http://s.ftimg.net/icon/svg/ftc-wealth-logo.svg");
-	background-repeat: no-repeat;
-	background-position: left center;
-	background-size: 240px auto;
-}
 
 //Gallery Images
 .c-galleries {
 	max-height: 375px;
 	overflow: hidden;
 	position: relative;
+	background: #777;
 }
 .c-gallery-container {
 	display: none;
@@ -65,6 +63,7 @@ img {
 	font-size: 36px;
 	display: inline;
 	line-height: 100%;
+	padding: 0 0.2em;
 }
 .c-gallery-dot.on {
 	color: white;
@@ -104,28 +103,61 @@ img {
 	border-top: 4px solid #9E2F50;
 	padding-top: 5px;
 }
-@media (min-width: 45.625em) {
-	.cicc-logo {
-		width:285px;
-		background-size: 285px auto;
-	}
+
+
+.c-header__container {
+	border-bottom: 5px solid #9E2F50;
+	color: white;
 }
+.c-header__inner {
+	height: $headerHeight;
+	background-color: #333;
+	padding: 0 $padding;
+}
+.c-header__primary {
+	max-width: 1280px;
+	margin: 0 auto;
+}
+.cicc-logo {
+	width:215px;
+	height: $headerHeight;
+	float: left;
+	background: url("http://s.ftimg.net/icon/png/ftc-wealth-logo.png");
+	background-image: none, url("http://s.ftimg.net/icon/svg/ftc-wealth-logo.svg");
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+.c-header__title {
+	height: $headerHeight;
+	float: left;
+	line-height: $headerHeight;
+	font-size: 20px;
+	padding: 0;
+	margin: 0;
+}
+.c-header__primary__right {
+	float: right;
+	height: $headerHeight;
+	text-align: right; 
+	line-height: $headerHeight;
+}
+.c-header__link, a.c-header__link:link, a.c-header__link:visited, a.c-header__link:hover, a.c-header__link:active {
+	line-height: $headerHeight;
+	color: white;
+	text-decoration: none;
+	margin-left: $padding;
+}
+
+.f_block_more {
+	display: none;
+}
+
 @media only screen and (min-width: 500px) {
 	.mobile-only {
 		display: none!important;
 	}
 }
-@media only screen and (max-width: 500px) {
-	.hide-on-mobile {
-		display:none!important;
-	}
-	.cicc-logo {
-		width:130px;
-	}
-	.c-gallery-dot {
-		font-size: 20px;
-	}
-}
+
 
 @media only screen and (max-width: 999px) {
 	.c-galleries {
@@ -195,6 +227,137 @@ img {
 	.introHeader {
 		width: auto;
 	}
+	#pe_product, #column3 {
+		width: 100%;
+		margin: 0;
+	}
+	.f_block {
+		width: 25%;
+		height: 364px;
+		border: 5px solid #FFF1E0;
+	}
+	.blockcontent {
+		width: 100%;
+		height: auto;
+		background-image:none;
+		background-color: #fffaf0;
+	}
+	.f_title {
+		background-color: #f08571;
+		padding:0;
+		line-height: 45px;
+	}
+	.f_title:after {
+		content: "";
+		display: block;
+		position: absolute;
+		top:45px;
+		left:0;
+		right:0;
+		margin:auto;
+		width: 0; 
+		height: 0; 
+		border-left: 20px solid transparent;
+		border-right: 20px solid transparent;
+		border-top: 15px solid #f08571;
+	}
+	.f_rortitle {
+		height: 45px;
+		padding-top: 20px;
+		border-width: 0 1px 0 1px;
+		border-style: solid;
+		border-color: #ccc;
+	}
+	.f_profit {
+		padding:0;
+		border-width: 0 1px 0 1px;
+		border-style: solid;
+		border-color: #ccc;
+	}
+	.f_slogon {
+		margin:0;
+		padding:0 10px;
+		width: 100%;
+		line-height:1.4em;
+		border-width: 0 1px 0 1px;
+		border-style: solid;
+		border-color: #ccc;
+		position: relative;
+		display: table;
+	}
+	.f_slogon_content {
+		display: table-cell;
+		vertical-align: middle;
+	}
+	.f_slogon:after {
+		content: '';
+		display: block;
+		position: absolute;
+		bottom: -5px;
+		left: 5px;
+		right: 5px;
+		border-top: 1px solid #ccc;
+	}
+	.f_opentime, .f_openperiod {
+		height: 25px;
+		padding-top: 10px;
+		border-width: 0 1px 0 1px;
+		border-style: solid;
+		border-color: #ccc;
+	}
+	.f_link, .f_linkopen {
+		border-width: 0 1px 0 1px;
+		border-style: solid;
+		border-color: #ccc;
+		height: 60px;
+		position:relative;
+		background-image: none;
+		top: 0;
+	}
+	.f_reserv_active, .f_reserv_active_hover {
+		border-width: 0 1px 1px 1px;
+		border-style: solid;
+		border-color: #ccc;
+		height: 50px;
+		background-image: none;
+		position: relative;
+	}
+	.f_link:after, .f_linkopen:after {
+		position: absolute;
+		content: '产品详情';
+		line-height: $buttonHeight;
+		height: $buttonHeight - 2;
+		display: block;
+		margin: auto;
+		top: 10px;
+		left: $padding - 1;
+		right: $padding - 1;
+		max-width: 283px;
+		color: #bf8c46;
+		background-color: white;
+		border: 1px solid #bf8c46;
+		font-size: 19px;
+		@include vendor-prefix("border-radius", "5px");
+	}	
+	.f_reserv_active:after, .f_reserv_active_hover:after {
+		position: absolute;
+		content: '立即预约';
+		line-height: $buttonHeight;
+		height: $buttonHeight;
+		display: block;
+		margin: auto;
+		top: 0;
+		left: $padding;
+		right: $padding;
+		background-color: #e02e00;
+		max-width: 285px;
+		color: white;
+		font-size: 19px;
+		@include vendor-prefix("border-radius", "5px");
+	}
+	.prodTable {
+		width: 100%;
+	}
 	* {
 		-webkit-box-sizing: border-box;
 		-moz-box-sizing: border-box;
@@ -202,7 +365,22 @@ img {
 	}
 }
 
-
+@media only screen and (max-width: 900px) { 
+	.f_block {
+		width: 33.333333%;
+	}
+	.f_block_more {
+		display: block;
+	}
+	.prodTable {
+		display: none;
+	}
+}
+@media only screen and (max-width: 700px) { 
+	.f_block {
+		width: 50%;
+	}
+}
 @media only screen and (max-width: 550px) {
 	.c-banner-1 {
 		width: 350px;
@@ -210,6 +388,41 @@ img {
 	#ciccintro, #wmintro {
 		width: auto;
 		float: none;
+	}
+	.c-header__primary__right {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.hide-on-mobile {
+		display:none!important;
+	}
+	.cicc-logo {
+		width: 105px;
+		margin-right: 14px;
+	}
+	.c-gallery-dot {
+		font-size: 20px;
+	}
+}
+
+@media only screen and (max-width: 450px) { 
+	.f_block {
+		width: 100%;
+		border-width: 10px;
+	}
+	.c-header__container {
+		border-bottom: none;
+	}
+	.c-header__title {
+		font-size: 18px;
+	}
+	.o-footer {
+		font-size: 16px;
+	}
+	.o-footer__title {
+		font-size: 18px;
 	}
 }
 
