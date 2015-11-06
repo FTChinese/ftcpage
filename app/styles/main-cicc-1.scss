@@ -17,7 +17,11 @@ $headerHeight: 50px;
 $padding: 14px;
 $buttonHeight: 36px;
 
-body {background:#FFF1E0;margin:0;}
+body {
+	background:#FFF1E0;
+	margin:0;
+	font-family: "Helvetica Neue",Verdana,Arial,"Hiragino Sans GB","WenQuanYi Micro Hei","Heiti SC",STHeiti,"微软雅黑", SimSun,sans-serif;
+}
 //.o-ft-header__logo img {width:80px;height:80px;}
 //a:link,a:visited,a:active{color:#000;text-decoration:none;cursor:pointer;}
 //a:hover,a:active{color:#2e6e9e;text-decoration:none;}
@@ -39,6 +43,10 @@ img {
 	position: relative;
 	background: #777;
 }
+.c-galleries-mobile {
+	display: none;
+}
+
 .c-gallery-container {
 	display: none;
 }
@@ -64,13 +72,14 @@ img {
 	display: inline;
 	line-height: 100%;
 	padding: 0 0.2em;
+	cursor: pointer;
 }
 .c-gallery-dot.on {
 	color: white;
 }
 .c-banner-1 {
 	margin: 0 auto;
-	background-image: url(http://i.ftimg.net/picture/9/000050639_piclink.jpg);
+	background-image: url(http://i.ftimg.net/picture/9/000050969_piclink.jpg);
 	background-repeat: no-repeat;
 	background-position: center top;
 	width: 100%;
@@ -108,7 +117,9 @@ img {
 	border-top: 4px solid #9E2F50;
 	padding-top: 5px;
 }
-
+.hide {
+	display: none;
+}
 
 .c-header__container {
 	border-bottom: 5px solid #9E2F50;
@@ -124,7 +135,8 @@ img {
 	margin: 0 auto;
 }
 .cicc-logo {
-	width:215px;
+	width:105px;
+	margin-right: 15px;
 	height: $headerHeight;
 	float: left;
 	background: url("http://s.ftimg.net/icon/png/ftc-wealth-logo.png");
@@ -139,6 +151,7 @@ img {
 	font-size: 20px;
 	padding: 0;
 	margin: 0;
+	font-weight: bold;
 }
 .c-header__primary__right {
 	float: right;
@@ -155,6 +168,35 @@ img {
 
 .f_block_more {
 	display: none;
+}
+
+.o-footer__title {
+	font-weight: bold;
+	span {
+		font-family: georgia;
+	}
+}
+
+.mobile-only {
+	display: none;
+}
+@media only screen and (max-width: 30.615em) {
+	.o-footer__link-list {
+		margin-bottom: 20px;
+		padding-top: 40px;
+	}
+	.o-footer__col {
+		width: 50%;
+	}
+	.o-footer__col--full-width {
+		width: 100%;
+	}
+	.o-footer__link-list > .o-footer__title {
+		margin-top: -40px;
+	}
+	.o-footer__link-list + .o-footer__link-list > .o-footer__title {
+		margin-top: -40px;
+	}
 }
 
 @media only screen and (min-width: 500px) {
@@ -552,9 +594,6 @@ img {
 		width: auto;
 		float: none;
 	}
-	.c-header__primary__right {
-		display: none;
-	}
 	.c-product-title-left-title {
 		font-size: 20px;
 	}
@@ -592,6 +631,9 @@ img {
 	.hide-on-mobile {
 		display:none!important;
 	}
+	.mobile-only {
+		display: block;
+	}
 	.cicc-logo {
 		width: 105px;
 		margin-right: 14px;
@@ -599,6 +641,10 @@ img {
 	.c-gallery-dot {
 		font-size: 20px;
 	}
+	.c-gallery-container {
+		padding-top: percentage(375/640);
+	}
+
 }
 
 @media only screen and (max-width: 450px) { 

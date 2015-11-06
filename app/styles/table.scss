@@ -1,0 +1,110 @@
+// caption {
+// display: table-caption;
+// text-align: -webkit-center;
+// }
+
+// table {
+// display: table;
+// border-collapse: separate;
+// border-spacing: 2px;
+// border-color: gray;
+// }
+// tr {
+// display: table-row;
+// vertical-align: inherit;
+// border-color: inherit;
+// }
+// td, th {
+// display: table-cell;
+// vertical-align: inherit;
+// }
+// thead {
+// display: table-header-group;
+// vertical-align: middle;
+// border-color: inherit;
+// }
+// .data-table {
+// border-spacing: 0;
+// }
+// .data-table caption {
+// font-weight: 500;
+// text-transform: uppercase;
+// }
+// .data-table caption, .data-table thead {
+// text-align: left;
+// }
+// .data-table tbody:before, .data-table thead:before {
+// content: "";
+// display: block;
+// height: 10px;
+// }
+// .data-table td {
+// padding: 5px 10px;
+// }
+// .data-table td, .data-table th {
+// vertical-align: top;
+// font-size: 14px;
+// }
+// .data-table tbody tr:nth-child(2n+1) {
+// background-color: #eae0d7;
+// }
+
+
+
+table{
+	margin:0 0 28px 0;
+}
+table tr.row-graphic{
+	background-color:transparent;
+	border:0;
+}
+table tr.row-text{
+	background-color:transparent;font-size:16px;
+	border-bottom:1px solid #e9decf;
+}
+.data-table{
+	border-spacing:0;
+	border-bottom:1px solid #e0dbd2;
+	font-family:Arial,Helvetica,sans-serif;
+}
+.data-table th{
+	border-right:1px solid #d5cdbf;
+	border-top:0;
+	padding:3px 10px;
+	background-color:#e9decf;
+	color:#000;
+	text-align:left;
+	height:32px;
+}
+.data-table td{
+	border-right:1px solid #e0dbd2;
+	padding:3px 10px;
+	text-align:left!important;
+	font-size: 14px;
+}
+.data-table tr{
+	background-color:#fdf8f0;
+}
+.data-table tr.row-odd, .data-table tbody tr:nth-child(2n){
+	background-color:#f8f3ea;
+}
+.data-table tr td:first-child{
+	border-left:1px solid #e0dbd2;
+}
+.data-table tr th:first-child{
+	border-left:1px solid #d5cdbf;
+}
+.data-table caption{
+	padding:6px 10px;
+	font-weight:bold;
+	background-color:#a7a59b;
+	color:#fff;
+	text-align:left;
+	height:auto;
+}
+
+@media only screen and (max-width: 1023px) {
+    .data-table td, .data-table th {
+        font-size: 12px;
+    }
+}

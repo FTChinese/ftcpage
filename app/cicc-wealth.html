@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	<title>中金高端财富 - FT中文网</title>
+	<title>中金高端理财 - FT中文网</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 	<!--
@@ -17,6 +17,11 @@
 			// We're doing it early in the head to avoid a flash of unstyled content
 			document.documentElement.className = document.documentElement.className.replace(/\bcore\b/g, 'enhanced');
 		}
+        var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        var gMobilePara = '';
+        if (isMobile === true) {
+            gMobilePara = 'source=mobile&';
+        }
 	</script>
 
 	<!--
@@ -38,7 +43,29 @@
 		/* Add any inline CSS here */
 	</style>
 
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','http://www.ftchinese.com/index.php/jsapi/analytics','ga');
+ga('create', 'UA-1608715-1');
+ga('require', 'displayfeatures');
+ga('send', 'pageview');
+</script>
+
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?61780009d16646408c9413e30604cf41";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
 <script src="//polyfill.webservices.ft.com/v1/polyfill.js"></script>
+
+
 </head>
 <body>
 
@@ -51,11 +78,11 @@
 					<a href="/">
 						<div class="cicc-logo"></div>
 					</a>
-					<h1 class="c-header__title">中金专区</h1>
+					<h1 class="c-header__title">中金高端理财<span class="hide-on-mobile">专区</span></h1>
 				</div>
 				<div class="c-header__primary__right">
-					<a href="#" class="c-header__link">链接1</a>
-					<a href="#" class="c-header__link">链接2</a>
+					<a href="http://user.ftchinese.com/login" class="c-header__link" id="log-in">登录</a>
+                    <a href="http://user.ftchinese.com/logout" class="c-header__link hide" id="log-out">登出</a>
 				</div>
 			</div>
 		</div>
@@ -63,15 +90,24 @@
 </header>
 
 
-<div class="c-galleries">
-	<div class="c-gallery-container"><a class="c-gallery" style="background-image: url(http://www.ciccs.com.cn/resources/images/ifeng/ifeng_store/header1_1.png)"></a></div>
-	<div class="c-gallery-container"><a class="c-gallery" style="background-image: url(http://www.ciccs.com.cn/resources/images/ifeng/ifeng_store/header1_2.png)"></a></div>
-	<div class="c-gallery-container"><a class="c-gallery" style="background-image: url(http://www.ciccs.com.cn/resources/images/ifeng/ifeng_store/header1_3.png)"></a></div>
-	<div class="c-gallery-dots"><div class="c-gallery-dot">&#149;</div><div class="c-gallery-dot">&#149;</div><div class="c-gallery-dot">&#149;</div></div>
+<div class="c-galleries hide-on-mobile">
+    <div class="c-gallery-container"><a target="_blank" href="https://jw.cicc.com.cn/finance/xs?chl=ft" class="c-gallery" style="background-image: url(http://i.ftimg.net/picture/7/000051437_piclink.jpg)"></a></div>
+	<div class="c-gallery-container"><a target="_blank" href="https://jw.cicc.com.cn/finance/qsy?chl=ft" class="c-gallery" style="background-image: url(http://i.ftimg.net/picture/6/000051436_piclink.jpg)"></a></div>
+	<div class="c-gallery-container"><a target="_blank" href="https://jw.cicc.com.cn/finance/pecz?chl=ft" class="c-gallery" style="background-image: url(http://i.ftimg.net/picture/5/000051385_piclink.jpg)"></a></div>
+	<div class="c-gallery-dots"></div>
 </div>
 
+
+<div class="c-galleries mobile-only">
+    <div class="c-gallery-container"><a target="_blank" href="https://jw.cicc.com.cn/finance/xs?source=mobile&chl=ft" class="c-gallery" style="background-image: url(http://i.ftimg.net/picture/9/000051439_piclink.jpg)"></a></div>
+    <div class="c-gallery-container"><a target="_blank" href="https://jw.cicc.com.cn/finance/qsy?source=mobile&chl=ft" class="c-gallery" style="background-image: url(http://i.ftimg.net/picture/8/000051438_piclink.jpg)"></a></div>
+    <div class="c-gallery-container"><a target="_blank" href="https://jw.cicc.com.cn/finance/pecz?source=mobile&chl=ft" class="c-gallery" style="background-image: url(http://i.ftimg.net/picture/4/000051384_piclink.jpg)"></a></div>
+    <div class="c-gallery-dots"></div>
+</div>
+
+
 <div class="c-banner-container">
-	<a href="tel: 4001821166"><div class="c-banner-1">
+	<a href="tel: 4009101166"><div class="c-banner-1">
         <div class="c-banner-inner">
             <div class="c-banner-left">
                 <div class="c-banner-left-inner">
@@ -88,7 +124,7 @@
             <div class="c-banner-right">
                 <div class="c-banner-right-inner">
                     <span class="c-banner-right-title">预约热线</span>
-                    <span class="c-banner-right-detail">400 182 1166</span>
+                    <span class="c-banner-right-detail">400 910 1166</span>
                 </div>
             </div>
         </div>   
@@ -122,204 +158,256 @@
 <div id="content">
     <div id="column3">
         <div id="pe_product">
-	        <div id="repeatHighlightPEList:0:f_block" class="f_block"><div class="blockcontent">
-	            <div class="f_title">清水源20号</div>
-	            <div class="f_rortitle">代表产品累计收益</div>
-	            <div class="f_profit">430.1%</div>
-	            <div class="f_slogon"><div class="f_slogon_content">代表产品业绩位于同类股票型产品第3名</div></div>
-	            <div class="f_opentime">100万起</div>
-	            <div class="f_openperiod">月度开放</div><div><div id="repeatHighlightPEList:0:productlinkOpen" style="text-decoration:no-underline;cursor: pointer;color: darkgray;"><span onclick="javascript:window.open('http://www.ciccs.com.cn/tencent/qingshuiyuan20.xhtml', '_blank')" class="f_link" onmouseout="this.className='f_link'" onmouseover="this.className='f_linkopen'" style="display: block"></span></div></div><div><div id="repeatHighlightPEList:0:highlistReserveBtn4" class="f_reserv_active" style="text-decoration:underline;cursor: pointer;color: red;" onmouseover="this.className='f_reserv_active_hover'" onmouseout="this.className='f_reserv_active'" onclick="javascript:window.open('http://www.ciccs.com.cn/tencent/qingshuiyuan20.xhtml', '_blank')"></div><div id="repeatHighlightPEList:0:highlistReserveBtn42" class="f_reserv" style="text-decoration:no-underline;cursor: default;color: darkgray;display:none;"></div></div>
-	        </div></div>
-	        <div id="repeatHighlightPEList:1:f_block" class="f_block"><div class="blockcontent">
-	            <div class="f_title">淡水泉中金成长</div>
-	            <div class="f_rortitle">代表产品近一年收益</div>
-	            <div class="f_profit">83.3%</div>
-	            <div class="f_slogon"><div class="f_slogon_content">金牛奖基金经理为您创造持续收益</div></div>
-	            <div class="f_opentime">100万起</div>
-	            <div class="f_openperiod">月度开放</div><div><div id="repeatHighlightPEList:1:productlinkOpen" style="text-decoration:no-underline;cursor: pointer;color: darkgray;"><span onclick="javascript:window.open('http://www.ciccs.com.cn/tencent/danshuiquan.xhtml', '_blank')" class="f_link" onmouseout="this.className='f_link'" onmouseover="this.className='f_linkopen'" style="display: block"></span></div></div><div><div id="repeatHighlightPEList:1:highlistReserveBtn4" class="f_reserv_active" style="text-decoration:underline;cursor: pointer;color: red;" onmouseover="this.className='f_reserv_active_hover'" onmouseout="this.className='f_reserv_active'" onclick="javascript:window.open('http://www.ciccs.com.cn/tencent/danshuiquan.xhtml', '_blank')"></div><div id="repeatHighlightPEList:1:highlistReserveBtn42" class="f_reserv" style="text-decoration:no-underline;cursor: default;color: darkgray;display:none;"></div></div>
-	        </div></div>
-	        <div id="repeatHighlightPEList:2:f_block" class="f_block"><div class="blockcontent">
-	            <div class="f_title">和聚中金1号</div>
-	            <div class="f_rortitle">代表产品成立5年累计收益</div>
-	            <div class="f_profit">193.4%</div>
-	            <div class="f_slogon"><div class="f_slogon_content">三届金牛奖获得者，聚焦主题投资机会</div></div>
-	            <div class="f_opentime">100万元起</div>
-	            <div class="f_openperiod">月度开放</div><div><div id="repeatHighlightPEList:2:productlinkOpen" style="text-decoration:no-underline;cursor: pointer;color: darkgray;"><span onclick="javascript:window.open('http://www.ciccs.com.cn/tencent/hejuzhongjin1hao.xhtml', '_blank')" class="f_link" onmouseout="this.className='f_link'" onmouseover="this.className='f_linkopen'" style="display: block"></span></div></div><div><div id="repeatHighlightPEList:2:highlistReserveBtn4" class="f_reserv_active" style="text-decoration:underline;cursor: pointer;color: red;" onmouseover="this.className='f_reserv_active_hover'" onmouseout="this.className='f_reserv_active'" onclick="javascript:window.open('http://www.ciccs.com.cn/tencent/hejuzhongjin1hao.xhtml', '_blank')"></div><div id="repeatHighlightPEList:2:highlistReserveBtn42" class="f_reserv" style="text-decoration:no-underline;cursor: default;color: darkgray;display:none;"></div></div>
-	        </div></div>
-	        <div id="repeatHighlightPEList:3:f_block" class="f_block"><div class="blockcontent">
-	            <div class="f_title">朱雀新动力</div>
-	            <div class="f_rortitle">代表产品累计收益</div>
-	            <div class="f_profit">167.6%</div>
-	            <div class="f_slogon"><div class="f_slogon_content">四次金牛奖获得者，风险控制能力极强</div></div>
-	            <div class="f_opentime">100万起</div>
-	            <div class="f_openperiod">月度开放</div><div><div id="repeatHighlightPEList:3:productlinkOpen" style="text-decoration:no-underline;cursor: pointer;color: darkgray;"><span onclick="javascript:window.open('http://www.ciccs.com.cn/tencent/zhuquexdl.xhtml', '_blank')" class="f_link" onmouseout="this.className='f_link'" onmouseover="this.className='f_linkopen'" style="display: block"></span></div></div><div><div id="repeatHighlightPEList:3:highlistReserveBtn4" class="f_reserv_active" style="text-decoration:underline;cursor: pointer;color: red;" onmouseover="this.className='f_reserv_active_hover'" onmouseout="this.className='f_reserv_active'" onclick="javascript:window.open('http://www.ciccs.com.cn/tencent/zhuquexdl.xhtml', '_blank')"></div><div id="repeatHighlightPEList:3:highlistReserveBtn42" class="f_reserv" style="text-decoration:no-underline;cursor: default;color: darkgray;display:none;"></div></div>
-	        </div></div>
-	        <div id="repeatHighlightPEList:0:f_block" class="f_block f_block_more"><div class="blockcontent">
-	            <div class="f_title">清水源20号</div>
-	            <div class="f_rortitle">代表产品累计收益</div>
-	            <div class="f_profit">430.1%</div>
-	            <div class="f_slogon"><div class="f_slogon_content">代表产品业绩位于同类股票型产品第3名</div></div>
-	            <div class="f_opentime">100万起</div>
-	            <div class="f_openperiod">月度开放</div><div><div id="repeatHighlightPEList:0:productlinkOpen" style="text-decoration:no-underline;cursor: pointer;color: darkgray;"><span onclick="javascript:window.open('http://www.ciccs.com.cn/tencent/qingshuiyuan20.xhtml', '_blank')" class="f_link" onmouseout="this.className='f_link'" onmouseover="this.className='f_linkopen'" style="display: block"></span></div></div><div><div id="repeatHighlightPEList:0:highlistReserveBtn4" class="f_reserv_active" style="text-decoration:underline;cursor: pointer;color: red;" onmouseover="this.className='f_reserv_active_hover'" onmouseout="this.className='f_reserv_active'" onclick="javascript:window.open('http://www.ciccs.com.cn/tencent/qingshuiyuan20.xhtml', '_blank')"></div><div id="repeatHighlightPEList:0:highlistReserveBtn42" class="f_reserv" style="text-decoration:no-underline;cursor: default;color: darkgray;display:none;"></div></div>
-	        </div></div>
-	        <div id="repeatHighlightPEList:1:f_block" class="f_block f_block_more"><div class="blockcontent">
-	            <div class="f_title">淡水泉中金成长</div>
-	            <div class="f_rortitle">代表产品近一年收益</div>
-	            <div class="f_profit">83.3%</div>
-	            <div class="f_slogon"><div class="f_slogon_content">金牛奖基金经理为您创造持续收益</div></div>
-	            <div class="f_opentime">100万起</div>
-	            <div class="f_openperiod">月度开放</div><div><div id="repeatHighlightPEList:1:productlinkOpen" style="text-decoration:no-underline;cursor: pointer;color: darkgray;"><span onclick="javascript:window.open('http://www.ciccs.com.cn/tencent/danshuiquan.xhtml', '_blank')" class="f_link" onmouseout="this.className='f_link'" onmouseover="this.className='f_linkopen'" style="display: block"></span></div></div><div><div id="repeatHighlightPEList:1:highlistReserveBtn4" class="f_reserv_active" style="text-decoration:underline;cursor: pointer;color: red;" onmouseover="this.className='f_reserv_active_hover'" onmouseout="this.className='f_reserv_active'" onclick="javascript:window.open('http://www.ciccs.com.cn/tencent/danshuiquan.xhtml', '_blank')"></div><div id="repeatHighlightPEList:1:highlistReserveBtn42" class="f_reserv" style="text-decoration:no-underline;cursor: default;color: darkgray;display:none;"></div></div>
-	        </div></div>
+
+<div id="repeatHighlightPEList:1:f_block" class="f_block">
+    <div class="blockcontent">
+        <div class="f_title">中金星石</div>
+        <div class="f_rortitle">近一年收益</div>
+        <div class="f_profit">73.9%</div>
+        <div class="f_slogon">独家设计 10万元就能投的阳光私募</div>
+        <div class="f_opentime">10万起</div>
+        <div class="f_openperiod">每月开放两次</div>
+        <div>
+            <div id="repeatHighlightPEList:1:productlinkOpen" style="text-decoration:no-underline;cursor: pointer;color: darkgray;"> <span onclick="javascript:window.open('https://jw.cicc.com.cn/finance/xs?' + gMobilePara + 'chl=ft', '_blank')" class="f_link" onmouseout="this.className='f_link'" onmouseover="this.className='f_linkopen'" style="display: block"></span>
+            </div>
+        </div>
+        <div>
+            <div id="repeatHighlightPEList:1:highlistReserveBtn4" class="f_reserv_active" style="text-decoration:underline;cursor: pointer;color: red;" onmouseover="this.className='f_reserv_active_hover'" onmouseout="this.className='f_reserv_active'" onclick="javascript:window.open('https://jw.cicc.com.cn/finance/xs?' + gMobilePara + 'chl=ft', '_blank')"></div>
+            <div id="repeatHighlightPEList:1:highlistReserveBtn42" class="f_reserv" style="text-decoration:no-underline;cursor: default;color: darkgray;display:none;"></div>
+        </div>
+    </div>
+</div>
+
+
+<div id="repeatHighlightPEList:0:f_block" class="f_block">
+<div class="blockcontent">
+    <div class="f_title">普尔创智</div>
+    <div class="f_rortitle">近一年收益</div>
+    <div class="f_profit">98.8%</div>
+    <div class="f_slogon">卓越收益率曲线缔造者 可信赖的资产管理人</div>
+    <div class="f_opentime">100万起</div>
+    <div class="f_openperiod">月度开放</div>
+    <div>
+        <div id="repeatHighlightPEList:0:productlinkOpen" style="text-decoration:no-underline;cursor: pointer;color: darkgray;"> <span onclick="javascript:window.open('https://jw.cicc.com.cn/finance/pecz?' + gMobilePara + 'chl=ft', '_blank')" class="f_link" onmouseout="this.className='f_link'" onmouseover="this.className='f_linkopen'" style="display: block"></span>
+        </div>
+    </div>
+    <div>
+        <div id="repeatHighlightPEList:0:highlistReserveBtn4" class="f_reserv_active" style="text-decoration:underline;cursor: pointer;color: red;" onmouseover="this.className='f_reserv_active_hover'" onmouseout="this.className='f_reserv_active'" onclick="javascript:window.open('https://jw.cicc.com.cn/finance/pecz?' + gMobilePara + 'chl=ft', '_blank')"></div>
+        <div id="repeatHighlightPEList:0:highlistReserveBtn42" class="f_reserv" style="text-decoration:no-underline;cursor: default;color: darkgray;display:none;"></div>
+    </div>
+</div>
+</div>
+
+
+<div id="repeatHighlightPEList:3:f_block" class="f_block">
+    <div class="blockcontent">
+        <div class="f_title">清水源20号</div>
+        <div class="f_rortitle">代表产品累计收益</div>
+        <div class="f_profit">672.9%</div>
+        <div class="f_slogon">代表产品业绩位于同类股票型产品第3名</div>
+        <div class="f_opentime">100万起</div>
+        <div class="f_openperiod">月度开放</div>
+        <div>
+            <div id="repeatHighlightPEList:3:productlinkOpen" style="text-decoration:no-underline;cursor: pointer;color: darkgray;"> <span onclick="javascript:window.open('https://jw.cicc.com.cn/finance/qsy?' + gMobilePara + 'chl=ft', '_blank')" class="f_link" onmouseout="this.className='f_link'" onmouseover="this.className='f_linkopen'" style="display: block"></span>
+            </div>
+        </div>
+        <div>
+            <div id="repeatHighlightPEList:3:highlistReserveBtn4" class="f_reserv_active" style="text-decoration:underline;cursor: pointer;color: red;" onmouseover="this.className='f_reserv_active_hover'" onmouseout="this.className='f_reserv_active'" onclick="javascript:window.open('https://jw.cicc.com.cn/finance/qsy?' + gMobilePara + 'chl=ft', '_blank')"></div>
+            <div id="repeatHighlightPEList:3:highlistReserveBtn42" class="f_reserv" style="text-decoration:no-underline;cursor: default;color: darkgray;display:none;"></div>
+        </div>
+    </div>
+</div>
+
+
+<div id="repeatHighlightPEList:2:f_block" class="f_block">
+    <div class="blockcontent">
+        <div class="f_title">展博金选1号</div>
+        <div class="f_rortitle">代表产品累计收益</div>
+        <div class="f_profit">387.5%</div>
+        <div class="f_slogon">选美理论的实践者，超额收益的创造者</div>
+        <div class="f_opentime">100万起</div>
+        <div class="f_openperiod">月度开放</div>
+        <div>
+            <div id="repeatHighlightPEList:2:productlinkOpen" style="text-decoration:no-underline;cursor: pointer;color: darkgray;"> <span onclick="javascript:window.open('https://jw.cicc.com.cn/finance/zbjx?' + gMobilePara + 'chl=ft', '_blank')" class="f_link" onmouseout="this.className='f_link'" onmouseover="this.className='f_linkopen'" style="display: block"></span>
+            </div>
+        </div>
+        <div>
+            <div id="repeatHighlightPEList:2:highlistReserveBtn4" class="f_reserv_active" style="text-decoration:underline;cursor: pointer;color: red;" onmouseover="this.className='f_reserv_active_hover'" onmouseout="this.className='f_reserv_active'" onclick="javascript:window.open('https://jw.cicc.com.cn/finance/zbjx?' + gMobilePara + 'chl=ft', '_blank')"></div>
+            <div id="repeatHighlightPEList:2:highlistReserveBtn42" class="f_reserv" style="text-decoration:no-underline;cursor: default;color: darkgray;display:none;"></div>
+        </div>
+    </div>
+</div>
+
+
+<div id="repeatHighlightPEList:3:f_block" class="f_block f_block_more">
+    <div class="blockcontent">
+        <div class="f_title">淡水泉中金成长</div>
+        <div class="f_rortitle">代表产品近一年收益</div>
+        <div class="f_profit">88.5%</div>
+        <div class="f_slogon">金牛奖基金经理为您创造持续收益</div>
+        <div class="f_opentime">100万起</div>
+        <div class="f_openperiod">月度开放</div>
+        <div>
+            <div id="repeatHighlightPEList:3:productlinkOpen" style="text-decoration:no-underline;cursor: pointer;color: darkgray;"> <span onclick="javascript:window.open('https://jw.cicc.com.cn/finance/dsq?' + gMobilePara + 'chl=ft', '_blank')" class="f_link" onmouseout="this.className='f_link'" onmouseover="this.className='f_linkopen'" style="display: block"></span>
+            </div>
+        </div>
+        <div>
+            <div id="repeatHighlightPEList:3:highlistReserveBtn4" class="f_reserv_active" style="text-decoration:underline;cursor: pointer;color: red;" onmouseover="this.className='f_reserv_active_hover'" onmouseout="this.className='f_reserv_active'" onclick="javascript:window.open('https://jw.cicc.com.cn/finance/dsq?' + gMobilePara + 'chl=ft', '_blank')"></div>
+            <div id="repeatHighlightPEList:3:highlistReserveBtn42" class="f_reserv" style="text-decoration:no-underline;cursor: default;color: darkgray;display:none;"></div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div id="repeatHighlightPEList:4:f_block" class="f_block f_block_more">
+    <div class="blockcontent">
+        <div class="f_title">巨杉净值线4号</div>
+        <div class="f_rortitle">代表产品成立9个月收益</div>
+        <div class="f_profit">180.9%</div>
+        <div class="f_slogon">知名公募基金经理创办，管理产品业绩表现优异</div>
+        <div class="f_opentime">100万起</div>
+        <div class="f_openperiod">月度开放</div>
+        <div>
+            <div id="repeatHighlightPEList:3:productlinkOpen" style="text-decoration:no-underline;cursor: pointer;color: darkgray;"> <span onclick="javascript:window.open('https://jw.cicc.com.cn/finance/jsjzx?' + gMobilePara + 'chl=ft', '_blank')" class="f_link" onmouseout="this.className='f_link'" onmouseover="this.className='f_linkopen'" style="display: block"></span>
+            </div>
+        </div>
+        <div>
+            <div id="repeatHighlightPEList:3:highlistReserveBtn4" class="f_reserv_active" style="text-decoration:underline;cursor: pointer;color: red;" onmouseover="this.className='f_reserv_active_hover'" onmouseout="this.className='f_reserv_active'" onclick="javascript:window.open('https://jw.cicc.com.cn/finance/jsjzx?' + gMobilePara + 'chl=ft', '_blank')"></div>
+            <div id="repeatHighlightPEList:3:highlistReserveBtn42" class="f_reserv" style="text-decoration:no-underline;cursor: default;color: darkgray;display:none;"></div>
+        </div>
+    </div>
+</div>
+
+
+
         </div>
         <div class="clearfloat"></div>
         <div style="">
-            <table class="prodTable">
-                <tbody><tr class="prodTableHeader">
-                    <td class="prodTableHeadTD">
-                        产品名称
-                    </td>
-                    <td class="prodTableHeadTD">
-                        开放期
-                    </td>
-                    <td class="prodTableHeadTD">
-                        收益
-                    </td>
-                    <td class="prodTableHeadTD">
-                        认购起点
-                    </td>
-                    <td class="prodTableHeadTD">
-                    </td>
-                    <td class="prodTableHeadTD">
-                        操作
-                    </td>
-                </tr>
-                    <tr class="oddTr" id="PENonHL0">
-                        <td>
-                            
-                            <span onclick="javascript:window.open('http://www.ciccs.com.cn/tencent/zhongjinxingshi.xhtml', '_blank')" style="text-decoration: none;color: #DD300E;font-size: 16px;cursor: pointer;"> 中金星石</span>
-                        </td>
-                        <td>
-                            月度开放
-                        </td>
-                        <td class="ror">
-                            近一年收益50.2%
-                        </td>
-                        <td>
-                            10万起
-                        </td>
-                        <td>
-                            独家设计 10万元就能投的阳光私募
-                        </td>
-                        <td><div><div id="repeatNonHighlightPEList:0:listReserveBtn" style="text-decoration:no-underline;cursor: pointer;color: red;font-size:16px;" onclick="javascript:window.open('http://www.ciccs.com.cn/tencent/zhongjinxingshi.xhtml', '_blank')">
 
-                                    立即预约
-                                </div><div id="repeatNonHighlightPEList:0:listReserveBtn2" style="text-decoration:no-underline;cursor: default;font-size:16px;color: darkgray;display:none;">
-                                    立即预约
-                                </div></div>
-                        </td>
-                    </tr>
-                    <tr class="evenTr" id="PENonHL1">
-                        <td>
-                            
-                            <span onclick="javascript:window.open('http://www.ciccs.com.cn/tencent/duichongyihao.xhtml', '_blank')" style="text-decoration: none;color: #DD300E;font-size: 16px;cursor: pointer;"> 中金对冲1号</span>
-                        </td>
-                        <td>
-                            月度开放
-                        </td>
-                        <td class="ror">
-                            近一年收益9.1%
-                        </td>
-                        <td>
-                            100万起
-                        </td>
-                        <td>
-                            市场中性 笑看A股涨跌 
-                        </td>
-                        <td><div><div id="repeatNonHighlightPEList:1:listReserveBtn" style="text-decoration:no-underline;cursor: pointer;color: red;font-size:16px;" onclick="javascript:window.open('http://www.ciccs.com.cn/tencent/duichongyihao.xhtml', '_blank')">
 
-                                    立即预约
-                                </div><div id="repeatNonHighlightPEList:1:listReserveBtn2" style="text-decoration:no-underline;cursor: default;font-size:16px;color: darkgray;display:none;">
-                                    立即预约
-                                </div></div>
-                        </td>
-                    </tr>
-                    <tr class="oddTr" id="PENonHL2">
-                        <td>
-                            
-                            <span onclick="javascript:window.open('http://www.ciccs.com.cn/tencent/zuchongzhi12.xhtml', '_blank')" style="text-decoration: none;color: #DD300E;font-size: 16px;cursor: pointer;"> 祖冲之12号</span>
-                        </td>
-                        <td>
-                            季度开放
-                        </td>
-                        <td class="ror">
-                            代表产品费后年化收益13.7%
-                        </td>
-                        <td>
-                            100万起
-                        </td>
-                        <td>
-                            最强量化投资阵容 打造真正绝对收益
-                        </td>
-                        <td><div><div id="repeatNonHighlightPEList:2:listReserveBtn" style="text-decoration:no-underline;cursor: pointer;color: red;font-size:16px;" onclick="javascript:window.open('http://www.ciccs.com.cn/tencent/zuchongzhi12.xhtml', '_blank')">
+<table class="prodTable">
+    <tbody>
+        <tr class="prodTableHeader">
+            <td class="prodTableHeadTD">产品名称</td>
+            <td class="prodTableHeadTD">开放期</td>
+            <td class="prodTableHeadTD">收益</td>
+            <td class="prodTableHeadTD">认购起点</td>
+            <td class="prodTableHeadTD"></td>
+            <td class="prodTableHeadTD">操作</td>
+        </tr>
+        <tr class="oddTr" id="PENonHL0">
+            <td> <span onclick="javascript:window.open('https://jw.cicc.com.cn/finance/jsjzx?' + gMobilePara + 'chl=ft', '_blank')" style="text-decoration: none;color: #DD300E;font-size: 16px;cursor: pointer;"> 巨杉净值线4号</span>
 
-                                    立即预约
-                                </div><div id="repeatNonHighlightPEList:2:listReserveBtn2" style="text-decoration:no-underline;cursor: default;font-size:16px;color: darkgray;display:none;">
-                                    立即预约
-                                </div></div>
-                        </td>
-                    </tr>
-                    <tr class="evenTr" id="PENonHL3">
-                        <td>
-                            
-                            <span onclick="javascript:window.open('http://www.ciccs.com.cn/tencent/dingfeng3qi.xhtml', '_blank')" style="text-decoration: none;color: #DD300E;font-size: 16px;cursor: pointer;"> 鼎锋成长3期</span>
-                        </td>
-                        <td>
-                            月度开放
-                        </td>
-                        <td class="ror">
-                            代表产品近6年累计收益291.0%
-                        </td>
-                        <td>
-                            100万起
-                        </td>
-                        <td>
-                            专注于优质成长股挖掘
-                        </td>
-                        <td><div><div id="repeatNonHighlightPEList:3:listReserveBtn" style="text-decoration:no-underline;cursor: pointer;color: red;font-size:16px;" onclick="javascript:window.open('http://www.ciccs.com.cn/tencent/dingfeng3qi.xhtml', '_blank')">
+            </td>
+            <td>月度开放</td>
+            <td class="ror">代表产品成立9个月收益180.9%</td>
+            <td>100万起</td>
+            <td>知名公募基金经理创办，管理产品业绩表现优异</td>
+            <td>
+                <div>
+                    <div id="repeatNonHighlightPEList:0:listReserveBtn" style="text-decoration:no-underline;cursor: pointer;color: red;font-size:18px;" onclick="javascript:window.open('https://jw.cicc.com.cn/finance/jsjzx?' + gMobilePara + 'chl=ft', '_blank')">立即预约</div>
+                    <div id="repeatNonHighlightPEList:0:listReserveBtn2" style="text-decoration:no-underline;cursor: default;font-size:18px;color: darkgray;display:none;">立即预约</div>
+                </div>
+            </td>
+        </tr>
+        <tr class="evenTr" id="PENonHL1" style="display:none;">
+            <td> <span onclick="javascript:window.open('https://jw.cicc.com.cn/finance/qsy?' + gMobilePara + 'chl=ft', '_blank')" style="text-decoration: none;color: #DD300E;font-size: 16px;cursor: pointer;"> 清水源20号</span>
 
-                                    立即预约
-                                </div><div id="repeatNonHighlightPEList:3:listReserveBtn2" style="text-decoration:no-underline;cursor: default;font-size:16px;color: darkgray;display:none;">
-                                    立即预约
-                                </div></div>
-                        </td>
-                    </tr>
-                    <tr class="oddTr" id="PENonHL4">
-                        <td>
-                            
-                            <span onclick="javascript:window.open('http://www.ciccs.com.cn/tencent/huizhengchengzhang.xhtml', '_blank')" style="text-decoration: none;color: #DD300E;font-size: 16px;cursor: pointer;"> 惠正成长</span>
-                        </td>
-                        <td>
-                            月度开放
-                        </td>
-                        <td class="ror">
-                            近一年收益55.6%
-                        </td>
-                        <td>
-                            300万起
-                        </td>
-                        <td>
-                            分享企业成长带来的价值创造
-                        </td>
-                        <td><div><div id="repeatNonHighlightPEList:4:listReserveBtn" style="text-decoration:no-underline;cursor: pointer;color: red;font-size:16px;" onclick="javascript:window.open('http://www.ciccs.com.cn/tencent/huizhengchengzhang.xhtml', '_blank')">
+            </td>
+            <td>月度开放</td>
+            <td class="ror">代表产品累计收益672.9%</td>
+            <td>100万起</td>
+            <td>代表产品业绩位于同类股票型产品第3名</td>
+            <td>
+                <div>
+                    <div id="repeatNonHighlightPEList:1:listReserveBtn" style="text-decoration:no-underline;cursor: pointer;color: red;font-size:18px;" onclick="javascript:window.open('https://jw.cicc.com.cn/finance/qsy?' + gMobilePara + 'chl=ft', '_blank')">立即预约</div>
+                    <div id="repeatNonHighlightPEList:1:listReserveBtn2" style="text-decoration:no-underline;cursor: default;font-size:18px;color: darkgray;display:none;">立即预约</div>
+                </div>
+            </td>
+        </tr>
+        <tr class="oddTr" id="PENonHL2">
+            <td> <span onclick="javascript:window.open('https://jw.cicc.com.cn/finance/hjzjcf?' + gMobilePara + 'chl=ft', '_blank')" style="text-decoration: none;color: #DD300E;font-size: 16px;cursor: pointer;"> 和聚中金1号</span>
 
-                                    立即预约
-                                </div><div id="repeatNonHighlightPEList:4:listReserveBtn2" style="text-decoration:no-underline;cursor: default;font-size:16px;color: darkgray;display:none;">
-                                    立即预约
-                                </div></div>
-                        </td>
-                    </tr>
-            </tbody></table>
-            
+            </td>
+            <td>月度开放</td>
+            <td class="ror">代表产品近一年收益75.1%</td>
+            <td>100万元起</td>
+            <td>三届金牛奖获得者，聚焦主题投资机会</td>
+            <td>
+                <div>
+                    <div id="repeatNonHighlightPEList:2:listReserveBtn" style="text-decoration:no-underline;cursor: pointer;color: red;font-size:18px;" onclick="javascript:window.open('https://jw.cicc.com.cn/finance/hjzjcf?' + gMobilePara + 'chl=ft', '_blank')">立即预约</div>
+                    <div id="repeatNonHighlightPEList:2:listReserveBtn2" style="text-decoration:no-underline;cursor: default;font-size:18px;color: darkgray;display:none;">立即预约</div>
+                </div>
+            </td>
+        </tr>
+        <tr class="evenTr" id="PENonHL3">
+            <td> <span onclick="javascript:window.open('https://jw.cicc.com.cn/finance/rfnp?' + gMobilePara + 'chl=ft', '_blank')" style="text-decoration: none;color: #DD300E;font-size: 16px;cursor: pointer;"> 朱雀新动力</span>
+
+            </td>
+            <td>月度开放</td>
+            <td class="ror">代表产品累计收益88.5%</td>
+            <td>100万起</td>
+            <td>四次金牛奖获得者，风险控制能力极强</td>
+            <td>
+                <div>
+                    <div id="repeatNonHighlightPEList:3:listReserveBtn" style="text-decoration:no-underline;cursor: pointer;color: red;font-size:18px;" onclick="javascript:window.open('https://jw.cicc.com.cn/finance/rfnp?' + gMobilePara + 'chl=ft', '_blank')">立即预约</div>
+                    <div id="repeatNonHighlightPEList:3:listReserveBtn2" style="text-decoration:no-underline;cursor: default;font-size:18px;color: darkgray;display:none;">立即预约</div>
+                </div>
+            </td>
+        </tr>
+
+
+        <tr class="evenTr" id="PENonHL3">
+            <td> <span onclick="javascript:window.open('https://jw.cicc.com.cn/finance/dsq?' + gMobilePara + 'chl=ft', '_blank')" style="text-decoration: none;color: #DD300E;font-size: 16px;cursor: pointer;"> 淡水泉中金成长</span>
+
+            </td>
+            <td>月度开放</td>
+            <td class="ror">代表产品近一年收益221.4%</td>
+            <td>100万起</td>
+            <td>金牛奖基金经理为您创造持续收益</td>
+            <td>
+                <div>
+                    <div id="repeatNonHighlightPEList:3:listReserveBtn" style="text-decoration:no-underline;cursor: pointer;color: red;font-size:18px;" onclick="javascript:window.open('https://jw.cicc.com.cn/finance/dsq?' + gMobilePara + 'chl=ft', '_blank')">立即预约</div>
+                    <div id="repeatNonHighlightPEList:3:listReserveBtn2" style="text-decoration:no-underline;cursor: default;font-size:18px;color: darkgray;display:none;">立即预约</div>
+                </div>
+            </td>
+        </tr>
+
+        <tr class="evenTr" id="PENonHL7" style="">
+            <td> <span onclick="javascript:window.open('https://jw.cicc.com.cn/finance/hzcz?' + gMobilePara + 'chl=ft', '_blank')" style="text-decoration: none;color: #DD300E;font-size: 16px;cursor: pointer;"> 惠正成长</span>
+
+            </td>
+            <td>月度开放</td>
+            <td class="ror">近一年收益150%</td>
+            <td>300万起</td>
+            <td>重量级基金经理掌舵 分享企业成长带来的价值创造</td>
+            <td>
+                <div>
+                    <div id="repeatNonHighlightPEList:7:listReserveBtn" style="text-decoration:no-underline;cursor: pointer;color: red;font-size:18px;" onclick="javascript:window.open('https://jw.cicc.com.cn/finance/hzcz?' + gMobilePara + 'chl=ft', '_blank')">立即预约</div>
+                    <div id="repeatNonHighlightPEList:7:listReserveBtn2" style="text-decoration:no-underline;cursor: default;font-size:18px;color: darkgray;display:none;">立即预约</div>
+                </div>
+            </td>
+        </tr>
+        <tr class="evenTr" id="PENonHL9">
+            <td> <span onclick="javascript:window.open('https://jw.cicc.com.cn/finance/df?' + gMobilePara + 'chl=ft', '_blank')" style="text-decoration: none;color: #DD300E;font-size: 16px;cursor: pointer;"> 鼎锋成长3期</span>
+
+            </td>
+            <td>月度开放</td>
+            <td class="ror">代表产品近6年累计收益312.7%</td>
+            <td>100万起</td>
+            <td>专注于优质成长股挖掘</td>
+            <td>
+                <div>
+                    <div id="repeatNonHighlightPEList:9:listReserveBtn" style="text-decoration:no-underline;cursor: pointer;color: red;font-size:18px;" onclick="javascript:window.open('https://jw.cicc.com.cn/finance/df?' + gMobilePara + 'chl=ft', '_blank')">立即预约</div>
+                    <div id="repeatNonHighlightPEList:9:listReserveBtn2" style="text-decoration:no-underline;cursor: default;font-size:18px;color: darkgray;display:none;">立即预约</div>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
                 
                 
                 
@@ -340,7 +428,7 @@
                 <div class="block">
                     <div class="title">第<span>1</span>家中外合资投资银行</div>
                     <div class="blockContent">
-                        中国国际金融有限公司成立于1995年7月，公司的股东为中央汇金等国内外著名金融机构。
+                        中国国际金融股份有限公司成立于1995年7月，公司的股东为中央汇金等国内外著名金融机构。
                     </div>
                 </div>
                 <div class="block">
@@ -399,9 +487,10 @@
 
 
 <footer class="o-footer" data-o-component="o-footer">
+<!--
 	<nav class="o-footer__row">
 		<div class="o-footer__col o-footer__col--full-width">
-			<h3 class="o-footer__title">板块</h3>
+			<h3 class="o-footer__title"><span>FT</span>中文网板块</h3>
 			<ul class="o-footer__row o-footer__section-list">
 				<li class="o-footer__link o-footer__section-link o-footer__col"><a href="//www.ftchinese.com">首页</a></li>
 				<li class="o-footer__link o-footer__section-link o-footer__col"><a href="/channel/china.html">中国</a></li>
@@ -455,6 +544,7 @@
 			</ul>
 		</nav>
 	</div>
+    -->
 	<div class="o-footer__row o-footer__copyright">
 		<div class="o-footer__col o-footer__col--full-width">
 			<span>&#xA9; THE FINANCIAL TIMES LTD 2015.</span>
@@ -480,4 +570,5 @@
 <script src="scripts/cicc-1.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
+
 </html>

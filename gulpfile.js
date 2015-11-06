@@ -90,26 +90,6 @@ gulp.task('origami', function () {
   getUrltoFile ('http://build.origami.ft.com/bundles/css?modules=o-footer@^3.0.0,o-table@^1.6.0', './bower_components/origami/build.scss');
 });
 
-gulp.task('ea', function () {
-  var message = {};
-  message.head = {};
-  message.head.transactiontype = '10001';
-  message.head.source = 'web';
-  message.body = {};
-  message.body.ielement = {};
-  message.body.ielement.num = 30;
-  postDatatoFile('http://m.ftchinese.com/eaclient/apijson.php', message, './app/api/ea001.json');
-  message.head.transactiontype = '10003';
-  postDatatoFile('http://m.ftchinese.com/eaclient/apijson.php', message, './app/api/ea003.json');
-  message.head.transactiontype = '10007';
-  postDatatoFile('http://m.ftchinese.com/eaclient/apijson.php', message, './app/api/ea007.json');
-  getUrltoFile ('http://m.ftchinese.com/index.php/ft/channel/phonetemplate.html?', './app/api/home.tpl');
-  getUrltoFile ('http://m.ftchinese.com/index.php/ft/channel/phonetemplate.html?channel=homepagevideo&', './app/api/homepagevideo.tpl');
-  getUrltoFile ('http://m.ftchinese.com/index.php/ft/channel/phonetemplate.html?channel=skyZ&', './app/api/skyZ.tpl');
-  getUrltoFile ('http://m.ftchinese.com/index.php/ft/channel/ipadvideo.html?', './app/api/ipadvideo.tpl');
-  getUrltoFile ('http://m.ftchinese.com/index.php/jsapi/get_last_updatetime?', './app/api/get_last_updatetime.json');
-  getUrltoFile ('http://m.ftchinese.com/index.php/jsapi/hotstory/1days?', './app/api/hotstory.json');
-});
 
 gulp.task('jshint', function () {
   return gulp.src('app/scripts/**/*.js')
@@ -240,15 +220,38 @@ gulp.task('copy', ['build'], function () {
   var replace = require('gulp-replace');
   var rename = require("gulp-rename");
   var thedatestamp = new Date().getTime();
-  gulp.src('dist/cicc-wealth.html')
+  /*gulp.src('dist/cicc-wealth.html')
     .pipe(replace(/styles\/bundle\-cicc\-1\.css/g, 'http://s.ftimg.net/styles/bundle-cicc-1.css?' + thedatestamp))
     .pipe(replace(/scripts\/bundle\-cicc\-1\.js/g, 'http://s.ftimg.net/js/bundle-cicc-1.js?' + thedatestamp))
     .pipe(gulp.dest('../testing/dev_www/frontend/tpl/marketing'))
-    .pipe(gulp.dest('../dev_www/frontend/tpl/marketing'));
+    .pipe(gulp.dest('../dev_www/frontend/tpl/marketing'));*/
+  gulp.src('dist/shanghai.html')
+      .pipe(gulp.dest('../testing/dev_www/frontend/tpl/special'))
+      .pipe(gulp.dest('../dev_www/frontend/tpl/special'));
   gulp.src('dist/styles/*.css')
     .pipe(gulp.dest('../dev_www/frontend/static/styles'));
   gulp.src('dist/scripts/*.js')
     .pipe(gulp.dest('../dev_www/frontend/static/js'));
+
+  var fileName = '../dev_www/frontend/tpl/include/timestamp.html';
+  var fs = require('fs');
+  fs.writeFile(fileName, thedatestamp, function(err) {
+      if(err) {
+          return console.log(err);
+      }
+      console.log(thedatestamp);
+      console.log('writen to');
+      console.log(fileName);
+  });
+  fileName = '../testing/dev_www/frontend/tpl/include/timestamp.html';
+  fs.writeFile(fileName, thedatestamp, function(err) {
+      if(err) {
+          return console.log(err);
+      }
+      console.log(thedatestamp);
+      console.log('writen to');
+      console.log(fileName);
+  });
 });
 
 
@@ -257,10 +260,6 @@ gulp.task('ga', function () {
     getUrltoFile('http://m.ftchinese.com/index.php/jsapi/analytics', './dist/log/ga.js');
 });
 
-
-gulp.task('publish', function () {
-
-});
 
 gulp.task('build', ['jshint', 'html', 'images', 'fonts', 'extras', 'api'], function () {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
