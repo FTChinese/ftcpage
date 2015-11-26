@@ -630,7 +630,7 @@ function datongnew() {
 //dolphin datong
 function dolDaTong(pID,cID,buttonNodeID,leaderboardNodeID,containerID){
     var adCode = '<scr'+'ipt type="text/javascript" src="http://dolphin.ftimg.net/s?z=ft&c='+cID+pID+slotStr+'" charset="gbk" ></scr'+'ipt>';
-    if (document.getElementById("top728x90") && (window.topbutton === "hide" || $("#top728x90 > div").width()>800 || $("#top728x90 iframe").width()>800 || $("#top728x90 object").width()>800 || $("#top728x90 img").width()>800)) {
+    if (document.getElementById('top728x90') && (window.topbutton === 'hide' || $('#top728x90 > div').width()>800 || $('#top728x90 iframe').width()>800 || $('#top728x90 object').width()>800 || $('#top728x90 img').width()>800)) {
         document.getElementById(buttonNodeID).style.display="none";
         document.getElementById(leaderboardNodeID).style.width="969px";
         document.getElementById(leaderboardNodeID).style.float="none";
@@ -639,8 +639,8 @@ function dolDaTong(pID,cID,buttonNodeID,leaderboardNodeID,containerID){
     }else{
         document.write(adCode);
     }
-    
 }
+
 function tab1() {
     wtd("iSHI-mh-SHH","上证综指",0);
     wtd("iHSI-mh-HKG","香港恒生",1);
