@@ -1,3 +1,28 @@
+function adReachability() {
+  var thirdPartyVendors = {
+    'dcR': '_dc',
+    'mmR': '_mm',
+    'szR': '_sz',
+    'amR': '_am'
+  };
+  var adParameter = '';
+  var adReachabilityStatus;
+  for (var k in thirdPartyVendors) {
+      if (thirdPartyVendors.hasOwnProperty(k)) {
+         //user[k] = data[k];
+         //console.log (k + ': ' + thirdPartyVendors[k]);
+         adReachabilityStatus = GetCookie(k);
+         if (adReachabilityStatus === 'reachable') {
+          adParameter += '&' + thirdPartyVendors[k] + '=1';
+         } else if (adReachabilityStatus === null) {
+          adParameter += '&' + thirdPartyVendors[k] + '=2';
+         }
+      }
+  }
+//  console.log (adParameter);
+  return adParameter;
+}
+
 function trackAd(adAction, adLabel, reachabilityStatus) {
   var adLoadTime;
   var adTimeSpent;
@@ -36,12 +61,15 @@ function checkAd(adOptions, adDomContainer) {
   var fallbackImgContainer = adDomContainer.getElementsByTagName('div')[0];
   var thirdPartyVendor = '';
   var reachabilityStatus = ''; // reachable, unreachable, unknown
-  var cookieSeconds = 60 * 59;
+  var cookieSeconds = 60 * 30;
+  var expression;
+  var regex;
+
   if (adOptions.checking === true) {
     adName = adOptions.adClient + ' ' + adOptions.adWidth + 'x' + adOptions.adHeight + ' ' + adOptions.adNote;
     if (adOptions.thirdPartyVendor !== undefined) {
       thirdPartyVendor = adOptions.thirdPartyVendor;
-    } else if (/doubleclick|adsafeprotected\.com\/rfw\/dc/i.test(adOptions.fallBackImg)) {
+    } else if (/doubleclick|adsafeprotected\.com\/.*\/dc\//i.test(adOptions.fallBackImg)) {
       thirdPartyVendor = 'dcR';
     }
     if (adOptions.checkingTime === 0) {
@@ -98,21 +126,28 @@ function checkAd(adOptions, adDomContainer) {
       trackAd('Impression Track Fail Main', adName, reachabilityStatus);
       SetCookie(thirdPartyVendor, 'unreachable', cookieSeconds, '/');
       if (adOptions.fallBackImg !== undefined && adOptions.fallBackImg !== '') {
-        img = new Image();
-        img.src = adOptions.fallBackImg; 
-        img.onload = function() {
-          //fallback image is loaded successfully
-          //tell Google Analytics that ad has loaded through the fallback
-          //adDomContainer.style.backgroundImage = 'url('+ img.src +')';
-          fallbackImgContainer.innerHTML = '<img src="' + img.src + '">';
-          trackAd('Impression Track Success', adName, reachabilityStatus);
-          trackAd('Impression Track Fallback Image', adName, reachabilityStatus);
-        };
-        img.onerror = function() {
-          //fallback image is not loaded successfully
-          //tell Google Analytics that fallback image has also failed
-          trackAd('Impression Track Fail Fallback', adName, reachabilityStatus);
-        };
+      expression = /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi;
+      regex = new RegExp(expression);
+        if (adOptions.fallBackImg.match(regex)) {
+          img = new Image();
+          img.src = adOptions.fallBackImg; 
+          img.onload = function() {
+            //fallback image is loaded successfully
+            //tell Google Analytics that ad has loaded through the fallback
+            //adDomContainer.style.backgroundImage = 'url('+ img.src +')';
+            fallbackImgContainer.innerHTML = '<img src="' + img.src + '">';
+            trackAd('Impression Track Success', adName, reachabilityStatus);
+            trackAd('Impression Track Fallback Image', adName, reachabilityStatus);
+          };
+          img.onerror = function() {
+            //fallback image is not loaded successfully
+            //tell Google Analytics that fallback image has also failed
+            trackAd('Impression Track Fail Fallback', adName, reachabilityStatus);
+          };
+        } else {
+          trackAd('Impression Track Fail Fallback Invalid', adName, reachabilityStatus);
+          ga('send','event','FallBack Image Error', adName, adOptions.fallBackImg, {'nonInteraction':1});
+        }
       }
     }
   }
@@ -156,3 +191,76 @@ function checkAdLoad() {
 
 	}
 }
+
+
+//dolphin datong
+function dolDaTong(pID,cID,buttonNodeID,leaderboardNodeID,containerID){
+    var adCode = '<scr'+'ipt type="text/javascript" src="http://dolphin.ftimg.net/s?z=ft&c='+cID+pID+slotStr+adReachability()+'" charset="gbk" ></scr'+'ipt>';
+    if (document.getElementById('top728x90') && (window.topbutton === 'hide' || $('#top728x90 > div').width()>800 || $('#top728x90 iframe').width()>800 || $('#top728x90 object').width()>800 || $('#top728x90 img').width()>800)) {
+        document.getElementById(buttonNodeID).style.display="none";
+        document.getElementById(leaderboardNodeID).style.width="969px";
+        document.getElementById(leaderboardNodeID).style.float="none";
+        document.getElementById(leaderboardNodeID).style.backgroundColor="transparent";
+        document.getElementById(containerID).style.width="969px";
+    }else{
+        document.write(adCode);
+    }
+}
+
+
+/****dolphin广告****/
+//参数依次为
+//位置ID
+//频道ID
+//DOM节点ID(script选填，script方式不需要NodeID，采用document.write)
+//iframe宽高（选填，不传这两个参数将添加script广告）
+function dolphinAD(pID,cID,NodeID,w,h){
+    var adCode;
+    if(!pID){
+        return "positionID missing";
+    }
+    if(!cID){
+        return "channelID missing";
+    }
+    if(w&&h){//iframe方式
+        if(!w){
+            return "width missing";
+        }
+        if(!h){
+            return "height missing";
+        }
+        //adCode = '<iframe width="'+w+'" height="'+h+'" frameborder="0" scrolling="no" marginwidth="0" marginheight="0" src="http://dolphin.ftimg.net/s?z=ft&c='+cID+pID+slotStr+'&op=1" ></iframe>';
+        adCode = '<iframe width="'+w+'" height="'+h+'" frameborder="0" scrolling="no" marginwidth="0" marginheight="0" src="/m/marketing/ad.html#adid=' + cID + pID + slotStr + '" ></iframe>';
+        if (document.getElementById(NodeID)){
+            document.getElementById(NodeID).innerHTML=adCode;
+            return adCode;
+        }
+        return "node missing";
+    }
+    //script 方式
+    try {
+        adCode = '<scr'+'ipt type="text/javascript" src="http://dolphin.ftimg.net/s?z=ft&c='+cID+pID+slotStr+adReachability()+'" charset="gbk" ></scr'+'ipt>';
+        document.write(adCode);
+    } catch (err) {
+        var k=err.toString();
+        ga('send','event', 'CatchError', 'AD', pId + '' + cID + ':' + k, {'nonInteraction':1});
+    }
+    return adCode;
+}
+
+function setDolphinSlot(key){
+  //定义slot随机数实现联动互斥功能
+  var rString = window.dolRand?"&slot="+window.dolRand:"",
+      cString = GetCookie(key),
+      x;
+  if(!cString){return rString;}
+  window.cArray = cString.split(";");
+  for(x in window.cArray){
+      if (window.cArray.hasOwnProperty(x)) {
+          window.cArray[x]=window.cArray[x].replace("|","=");
+          rString += "&_"+window.cArray[x];
+      }
+  }
+  return rString;
+}
+

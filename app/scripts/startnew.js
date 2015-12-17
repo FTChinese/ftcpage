@@ -307,11 +307,13 @@ function trackAdClick() {
             }
         });
         adTrack=1;
+        /*
         try {
             console.log ("亲爱的前端开发者，FT中文网正在找你。复制这个网址，来看看我们的工作机会吧：http://www.ftchinese.com/jobshow/ft_20140218175933");
         }catch(ignore) {
         
         }
+        */
     }
 }
 
